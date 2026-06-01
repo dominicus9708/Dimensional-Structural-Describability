@@ -1,0 +1,8 @@
+﻿role,filename,path,exists,rows,columns
+detected_project_root,,D:\Paper\Dimensional_Structural_Describability\Strong_interaction,True,,
+minimal,strong_interaction_minimal_input.csv,D:\Paper\Dimensional_Structural_Describability\Strong_interaction\data\derived\input\strong_interaction_minimal_input.csv,True,5.0,19.0
+constants,strong_interaction_selected_constants_input_001.csv,D:\Paper\Dimensional_Structural_Describability\Strong_interaction\data\derived\input\strong_interaction_selected_constants_input_001.csv,True,6.0,10.0
+particles,strong_interaction_selected_particles_input_001.csv,D:\Paper\Dimensional_Structural_Describability\Strong_interaction\data\derived\input\strong_interaction_selected_particles_input_001.csv,True,8.0,15.0
+manifest,strong_interaction_input_manifest_001.csv,D:\Paper\Dimensional_Structural_Describability\Strong_interaction\data\derived\input\strong_interaction_input_manifest_001.csv,True,3.0,7.0
+searched_input_dir_000,,D:\Paper\Dimensional_Structural_Describability\Strong_interaction\data\derived\input,True,,
+run_arguments,,"{""project_root"": null, ""input_dir"": null, ""output_root"": null, ""near_threshold"": 0.15, ""feature_weight_mode"": ""derived""}",True,,

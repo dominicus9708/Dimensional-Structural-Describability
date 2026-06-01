@@ -1,0 +1,69 @@
+Strong Interaction Minimal Pipeline - Standard Stage Summary
+======================================================================
+Output directory: D:\Paper\Dimensional_Structural_Describability\Strong_interaction\results\standard\20260602_065210
+Input directory: D:\Paper\Dimensional_Structural_Describability\Strong_interaction\data\derived\input
+
+Stage interpretation:
+- This is a standard-baseline check only.
+- No Dimensional-Structural Describability validation is claimed here.
+- No QED, QCD, or mass-energy relation replacement is claimed.
+- B001 uses a diagnostic photon energy parameter because measured photon-pair energy was not supplied in the input.
+
+B001 diagnostic parameter:
+- each photon energy: 1.0 MeV
+- two-photon total energy: 2.0 MeV
+- For equal opposite momenta, the system-level invariant mass diagnostic is M = E_total in natural units.
+
+Case status counts:
+- pass: 4
+- diagnostic: 1
+- warning: 0
+- manual_review: 0
+
+Case summaries:
+- A001 | single_photon | pass
+  result: Photon massless baseline preserved.
+  computed: single_photon_rest_mass_MeV_c2 = 0
+  caution: No claim is made that photon mass is generated or modified.
+- B001 | opposite_direction_photon_pair | diagnostic
+  result: Two-photon opposite-momentum system has a system-level invariant mass when total momentum is zero.
+  computed: two_photon_system_invariant_mass_MeV_c2_diagnostic = 2
+  warning: Diagnostic value only. Each photon energy was supplied by script parameter, not by measured input data.
+  caution: This is not individual photon rest mass; it is system invariant mass.
+- C001P | proton | pass
+  result: Proton mass is not exhausted by the minimal u+u+d quark mass reference.
+  computed: proton_mass_gap_fraction = 0.990386583898
+  caution: Do not treat the mass gap as a derived proof of the theory; it is a standard-baseline comparison variable.
+- C001N | neutron | pass
+  result: Neutron mass is not exhausted by the minimal u+d+d quark mass reference.
+  computed: neutron_mass_gap_fraction = 0.987696439494
+  caution: Do not treat the mass gap as a derived proof of the theory; it is a standard-baseline comparison variable.
+- D001 | electron_positron_annihilation_threshold | pass
+  result: Electron-positron threshold rest-energy reference preserved.
+  computed: electron_positron_threshold_energy_MeV = 1.0219979
+  caution: No claim is made about deriving QED, photon production rules, spin rules, or decay rates.
+
+Numeric checks:
+- C001P_gap_recompute | pass
+  quantity: proton_mass_minus_uud_reference_sum
+  input: 929.25208816
+  recomputed: 929.25208816
+  difference: 0
+  note: Current quark mass reference is not a full QCD decomposition.
+- C001N_gap_recompute | pass
+  quantity: neutron_mass_minus_udd_reference_sum
+  input: 928.0054205
+  recomputed: 928.0054205
+  difference: 0
+  note: Current quark mass reference is not a full QCD decomposition.
+- D001_threshold_recompute | pass
+  quantity: 2_times_electron_mass
+  input: 1.0219979
+  recomputed: 1.0219979
+  difference: 0
+  note: Threshold reference only. QED transition rules are not derived or replaced.
+
+Next stage:
+- The structural stage may use this output as preserved standard baseline.
+- Structural interpretation must not overwrite the standard values.
+- QCD hadron mass gaps should be treated as standard-baseline comparison variables, not proof of the theory.

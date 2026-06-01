@@ -1,0 +1,4 @@
+﻿check_id,case_id,quantity,input_value,recomputed_value,difference,status,note
+C001P_gap_recompute,C001P,proton_mass_minus_uud_reference_sum,929.25208816,929.25208816,0,pass,Current quark mass reference is not a full QCD decomposition.
+C001N_gap_recompute,C001N,neutron_mass_minus_udd_reference_sum,928.0054205,928.0054205,0,pass,Current quark mass reference is not a full QCD decomposition.
+D001_threshold_recompute,D001,2_times_electron_mass,1.0219979,1.0219979,0,pass,Threshold reference only. QED transition rules are not derived or replaced.

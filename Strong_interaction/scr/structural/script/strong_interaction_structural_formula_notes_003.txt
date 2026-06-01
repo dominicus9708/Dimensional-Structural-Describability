@@ -1,0 +1,86 @@
+강력 상호작용 structural 파이프라인 수식 설명 003
+====================================================
+
+v003의 수식은 v002와 동일하다.
+이번 수정은 수식 변경이 아니라 입력 테이블의 `case_id` 처리 오류 수정이다.
+
+유지되는 수식 구조
+------------------
+
+1. 수치 특징
+각 case i와 수치 특징 j에 대해 원자료 값을 다음처럼 둔다.
+
+x_j(i)
+
+2. robust min-max 정규화
+
+q_{0.05,j} = quantile_0.05(x_j)
+q_{0.95,j} = quantile_0.95(x_j)
+
+x_tilde_j(i)
+=
+[clip(x_j(i), q_{0.05,j}, q_{0.95,j}) - q_{0.05,j}]
+/
+[q_{0.95,j} - q_{0.05,j} + epsilon]
+
+3. 구조 가중치
+
+C_j = valid_count_j / total_count
+
+V_j = Q_{0.75,j} - Q_{0.25,j}
+
+s_j = C_j (V_j + epsilon)
+
+w_j = s_j / sum_k s_k
+
+모든 s_j가 거의 0이면 등가중치를 사용한다.
+
+w_j = 1 / n
+
+4. 가중 구조량
+
+D_w(i) = sum_j w_j x_tilde_j(i)
+
+코드 출력명:
+- D_w_structural
+
+5. 내부 배경값
+
+D_bg = median_i D_w(i)
+
+코드 출력명:
+- D_bg_internal_median
+
+6. 구조 대비
+
+sigma(i) = D_w(i) - D_bg
+
+코드 출력명:
+- sigma_structural
+
+7. 내부 정규화
+
+gamma = 1 / [std_i(sigma(i)) + epsilon]
+
+sigma_robust(i) = gamma sigma(i)
+
+코드 출력명:
+- sigma_structural_robust_units
+
+8. 구조 응답 라벨
+
+if |sigma_robust(i)| <= threshold:
+    near_background
+
+if sigma_robust(i) > threshold:
+    above_background_structural_response
+
+if sigma_robust(i) < -threshold:
+    below_background_structural_response
+
+v003 입력 처리 변경
+-------------------
+공식 standard input에 이미 `case_id`가 있으면 그대로 사용한다.
+없을 때만 새 case_id를 생성한다.
+
+이 변경은 계산식에는 영향을 주지 않고, 입력 식별자 열 충돌만 해결한다.

@@ -1,0 +1,77 @@
+Strong-interaction structural pipeline summary
+================================================
+
+Run time:
+- 2026-06-02T08:24:36
+
+Detected project root:
+- D:\Paper\Dimensional_Structural_Describability\Strong_interaction
+
+Input policy:
+- Same official input directory as the standard pipeline.
+
+Input directory:
+- D:\Paper\Dimensional_Structural_Describability\Strong_interaction\data\derived\input
+
+Output directory:
+- D:\Paper\Dimensional_Structural_Describability\Strong_interaction\results\structural\20260602_082436
+
+Interpretive status
+-------------------
+This output is a structural diagnostic layer.
+
+It does not claim:
+- QCD derivation,
+- Standard Model replacement,
+- direct strong-interaction proof,
+- final empirical validation.
+
+It only computes an internally normalized structural descriptor from the same
+official input used by the standard baseline.
+
+Core quantities
+---------------
+D_w_structural:
+- weighted structural descriptor computed from normalized numeric input features.
+
+D_bg_internal_median:
+- internal background level, defined as the median of D_w_structural.
+
+sigma_structural:
+- structural contrast relative to the internal background.
+
+sigma_structural_robust_units:
+- internally normalized contrast using gamma_internal = 1 / std(sigma_structural).
+
+Structural response counts
+--------------------------
+{
+  "below_background_structural_response": 2,
+  "above_background_structural_response": 2,
+  "near_background": 1
+}
+
+Top feature weights
+-------------------
+- invariant_mass_MeV_c2: weight=0.499432, completeness=0.8, variability=937.829
+- mass_gap_MeV_c2: weight=0.494366, completeness=0.8, variability=928.317
+- constituent_rest_mass_sum_MeV_c2: weight=0.00600439, completeness=1, variability=9.02
+- mass_gap_fraction_of_system_mass: weight=0.000197783, completeness=0.6, variability=0.495193
+
+Output files
+------------
+- structural_case_summary_001.csv
+- structural_feature_weights_001.csv
+- structural_numeric_features_001.csv
+- structural_run_manifest_001.csv
+- structural_summary_001.txt
+- plots/structural_Dw_001.png
+- plots/structural_sigma_001.png
+- plots/structural_feature_weights_001.png
+
+Recommended wording
+-------------------
+Use: "structural diagnostic layer after a preserved standard baseline."
+
+Avoid: "QCD proof", "strong-interaction derivation", "Standard Model replacement",
+or "final validation."

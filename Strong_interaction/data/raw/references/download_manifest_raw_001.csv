@@ -1,0 +1,5 @@
+﻿source_id,url,attempted,success,output_file,row_count,error,downloaded_utc
+PDG_MASS_WIDTH_2025,https://pdg.lbl.gov/2025/mcdata/mass_width_2025.txt,true,true,D:\Paper\Dimensional_Structural_Describability\Strong_interaction\data\raw\source_tables\pdg_mass_width_raw_001.csv,232,,2026-06-01T21:30:51+00:00
+NIST_CODATA_2022_ALLASCII,https://physics.nist.gov/cuu/Constants/Table/allascii.txt,true,true,D:\Paper\Dimensional_Structural_Describability\Strong_interaction\data\raw\source_tables\nist_codata_constants_raw_001.csv,355,,2026-06-01T21:30:53+00:00
+HEPDATA_CSV_FORMAT_REFERENCE,https://www.hepdata.net/formats,false,,,,reference_only,2026-06-01T21:30:53+00:00
+PDG_API_REFERENCE,https://pdgweb.lbl.gov/2025/api/index.html,false,,,,reference_only,2026-06-01T21:30:53+00:00
