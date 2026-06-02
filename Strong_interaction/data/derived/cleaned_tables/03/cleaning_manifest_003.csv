@@ -1,0 +1,5 @@
+﻿output_file,row_count,status,notes
+benchmark_source_registry_input_candidates_003.csv,6,success,Source-registry input candidates prepared; not numerical input.
+missing_numerical_data_input_candidates_003.csv,3,success,Missing-data manifest input candidates prepared; blocking status preserved.
+reference_support_input_candidates_003.csv,4,success,Reference-support input candidates prepared; not validation data.
+input_candidate_manifest_003.csv,3,success,Input candidate manifest prepared.

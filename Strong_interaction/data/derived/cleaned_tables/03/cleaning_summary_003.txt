@@ -1,0 +1,28 @@
+Strong_interaction cleaned_tables/03 input-candidate normalization summary
+======================================================================
+Generated UTC: 2026-06-02T18:28:21+00:00
+Script version: 001
+
+Status:
+- cleaned_tables/03 prepares candidates that may be promoted to data/derived/input.
+- The candidates are source-registry, reference-support, and missing-data inputs only.
+- They are not numerical benchmark input, not standard-baseline input, and not event-level input.
+- Actual OPAL/JADE/L3 CSV/YAML/YODA or DELPHI event-level files remain required before numerical validation.
+
+Input layer:
+- D:\Paper\Dimensional_Structural_Describability\Strong_interaction\data\derived\cleaned_tables\02
+
+Output layer:
+- D:\Paper\Dimensional_Structural_Describability\Strong_interaction\data\derived\cleaned_tables\03
+
+Produced outputs:
+- benchmark_source_registry_input_candidates_003.csv: rows=6 status=success notes=Source-registry input candidates prepared; not numerical input.
+- missing_numerical_data_input_candidates_003.csv: rows=3 status=success notes=Missing-data manifest input candidates prepared; blocking status preserved.
+- reference_support_input_candidates_003.csv: rows=4 status=success notes=Reference-support input candidates prepared; not validation data.
+- input_candidate_manifest_003.csv: input candidate manifest
+
+Recommended next stage:
+1. Review cleaned_tables/03 input candidates.
+2. Run cleaned_tables/04 as a final promotion audit layer.
+3. Copy/promote only source-registry/reference-support/missing-data files into data/derived/input.
+4. Do not run standard or structural numerical validation until actual numerical benchmark tables are acquired.
