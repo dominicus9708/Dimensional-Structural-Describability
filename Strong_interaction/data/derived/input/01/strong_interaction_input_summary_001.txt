@@ -1,0 +1,29 @@
+Strong_interaction data/derived/input/01 promotion summary
+========================================================
+Generated UTC: 2026-06-02T18:33:16+00:00
+Script version: 001
+
+Input source layer:
+- D:\Paper\Dimensional_Structural_Describability\Strong_interaction\data\derived\cleaned_tables\03
+
+Output input layer:
+- D:\Paper\Dimensional_Structural_Describability\Strong_interaction\data\derived\input\01
+
+Status:
+- This input batch is source-registry/reference-support/missing-data input only.
+- It is not numerical benchmark input.
+- It is not standard-baseline input.
+- It is not event-level input.
+- Actual OPAL/JADE/L3 CSV/YAML/YODA or DELPHI event-level files remain required before numerical validation.
+
+Promoted files:
+- strong_interaction_source_registry_input_001.csv: status=promoted rows=6 validation=validated_non_numerical_input_candidate
+- strong_interaction_missing_numerical_data_input_001.csv: status=promoted rows=3 validation=validated_non_numerical_input_candidate
+- strong_interaction_reference_support_input_001.csv: status=promoted rows=4 validation=validated_non_numerical_input_candidate
+- strong_interaction_input_source_candidate_manifest_001.csv: status=promoted rows=3 validation=validated_non_numerical_input_candidate
+- strong_interaction_input_manifest_001.csv: generated input manifest
+
+Next allowed use:
+- Use this input batch to guide manual acquisition of numerical benchmark data.
+- Do not run standard/structural numerical validation from this input batch.
+- When actual numerical data are acquired, process them separately into cleaned_tables/03 or later numerical branch before creating a separate numerical input batch.
