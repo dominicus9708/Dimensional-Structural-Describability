@@ -1,0 +1,33 @@
+Strong_interaction raw-to-derived cleaning summary
+=================================================
+Generated UTC: 2026-06-02T17:49:57+00:00
+Script version: 001
+Output batch: 01
+
+Input directories:
+- D:\Paper\Dimensional_Structural_Describability\Strong_interaction\data\raw\references
+- D:\Paper\Dimensional_Structural_Describability\Strong_interaction\data\raw\source_tables
+
+Output directory:
+- D:\Paper\Dimensional_Structural_Describability\Strong_interaction\data\derived\cleaned_tables\01
+
+Interpretation:
+- arXiv HTML files were cleaned as provenance metadata only.
+- PDG and NIST TXT files were cleaned as reference support tables.
+- No final numerical event-shape benchmark input was produced in this stage.
+- data/derived/input must be created only after actual HEPData CSV or event-level files are selected.
+
+Produced outputs:
+- source_reference_metadata_cleaned_001.csv: rows=6 status=success notes=HTML provenance metadata cleaned; not numerical benchmark input.
+- nist_constants_cleaned_full_001.csv: rows=356 status=success notes=NIST full reference constants parsed.
+- nist_constants_cleaned_selected_001.csv: rows=10 status=success notes=NIST selected support constants parsed.
+- pdg_mass_width_cleaned_full_001.csv: rows=232 status=success notes=PDG mass-width support table parsed.
+- pdg_particle_masses_selected_001.csv: rows=18 status=success notes=PDG selected particle support set parsed.
+- benchmark_download_candidates_cleaned_001.csv: rows=4 status=success notes=Next-stage numerical data download candidates prepared.
+- raw_manifest_index_cleaned_001.csv: rows=5 status=success notes=Raw manifest index created.
+
+Recommended next stage:
+1. Locate HEPData record IDs for OPAL/JADE/L3, or exact DELPHI Open Data event files.
+2. Download actual CSV/event files into data/raw/source_tables.
+3. Run a second cleaner into cleaned_tables/02 or a later numbered folder.
+4. Only then select data/derived/input for skeleton/standard/structural execution.

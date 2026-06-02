@@ -1,0 +1,8 @@
+﻿output_file,row_count,status,notes
+source_reference_metadata_cleaned_001.csv,6,success,HTML provenance metadata cleaned; not numerical benchmark input.
+nist_constants_cleaned_full_001.csv,356,success,NIST full reference constants parsed.
+nist_constants_cleaned_selected_001.csv,10,success,NIST selected support constants parsed.
+pdg_mass_width_cleaned_full_001.csv,232,success,PDG mass-width support table parsed.
+pdg_particle_masses_selected_001.csv,18,success,PDG selected particle support set parsed.
+benchmark_download_candidates_cleaned_001.csv,4,success,Next-stage numerical data download candidates prepared.
+raw_manifest_index_cleaned_001.csv,5,success,Raw manifest index created.
