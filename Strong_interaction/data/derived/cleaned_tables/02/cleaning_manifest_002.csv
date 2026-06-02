@@ -1,0 +1,4 @@
+﻿output_file,row_count,status,notes
+benchmark_source_registry_refined_002.csv,6,success,Refined source registry only; no final input.
+missing_numerical_data_manifest_002.csv,3,success,Blocking missing numerical data recorded.
+reference_support_tables_index_002.csv,4,success,Reference support files indexed.

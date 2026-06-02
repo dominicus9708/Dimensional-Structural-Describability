@@ -1,0 +1,27 @@
+Strong_interaction cleaned_tables/02 source-registry refinement summary
+=====================================================================
+Generated UTC: 2026-06-02T18:21:42+00:00
+Script version: 001
+
+Status:
+- cleaned_tables/02 is not a numerical benchmark input layer.
+- It refines cleaned_tables/01 and records HEPData automatic-discovery failure plus alternative source routes.
+- No HTML metadata, PDG reference table, or NIST reference table is promoted to final input.
+
+Input layers:
+- D:\Paper\Dimensional_Structural_Describability\Strong_interaction\data\derived\cleaned_tables\01
+- D:\Paper\Dimensional_Structural_Describability\Strong_interaction\data\raw\references
+
+Output layer:
+- D:\Paper\Dimensional_Structural_Describability\Strong_interaction\data\derived\cleaned_tables\02
+
+Produced outputs:
+- benchmark_source_registry_refined_002.csv: rows=6 status=success notes=Refined source registry only; no final input.
+- missing_numerical_data_manifest_002.csv: rows=3 status=success notes=Blocking missing numerical data recorded.
+- reference_support_tables_index_002.csv: rows=4 status=success notes=Reference support files indexed.
+
+Next stage:
+1. Use benchmark_source_registry_refined_002.csv to manually inspect INSPIRE/DOI/arXiv source/HEPData/Rivet routes.
+2. Acquire actual binned CSV/YAML/YODA or DELPHI event-level files into data/raw/source_tables.
+3. Run a numerical cleaner into cleaned_tables/03.
+4. Promote only reviewed numerical tables into data/derived/input.
