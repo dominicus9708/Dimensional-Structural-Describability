@@ -1,0 +1,23 @@
+Strong_interaction metadata event download failure diagnosis summary
+================================================================
+Generated UTC: 2026-06-03T23:52:55+00:00
+Script version: 002
+
+Manifest rows read: 45
+Failed rows diagnosed: 21
+HTTP probing enabled: True
+
+Initial failure reason counts:
+- http_404_missing_or_not_direct_file: 21
+
+Probe interpretation counts:
+- probe_failed: 21
+
+Recommended next action counts:
+- manual_review: 21
+
+Interpretation:
+- Large/data-like failed endpoints may justify a revised downloader.
+- HTML, forbidden, missing, and placeholder endpoints should not be treated as event data.
+- Use the diagnosis CSV before changing download rules.
+Diagnosis CSV: D:\Paper\Dimensional_Structural_Describability\Strong_interaction\data\raw\references\02\strong_interaction_metadata_event_download_failure_diagnosis_raw_002.csv
