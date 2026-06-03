@@ -1,0 +1,127 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "additionalProperties": false,
+  "description": "Describe information needed for article entity.",
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "author": {
+      "type": "string"
+    },
+    "body": {
+      "additionalProperties": false,
+      "properties": {
+        "content": {
+          "type": "string"
+        },
+        "format": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "date_created": {
+      "items": {
+        "description": "The data-taking year for which the documentation was produced",
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "date_published": {
+      "description": "The year of publication on the portal",
+      "type": "string"
+    },
+    "experiment": {
+      "items": {
+        "description": "The name of the experiment the author is part of",
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "featured": {
+      "type": "integer"
+    },
+    "id": {
+      "title": "id",
+      "type": "string"
+    },
+    "related": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "screenshot": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "string"
+    },
+    "short_description": {
+      "additionalProperties": false,
+      "properties": {
+        "content": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "stripping": {
+      "additionalProperties": false,
+      "properties": {
+        "stream": {
+          "description": "Stripping stream information, used notably by LHCb",
+          "type": "string"
+        },
+        "version": {
+          "description": "Stripping version information, used notably by LHCb",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "tags": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "title": {
+      "title": "Title",
+      "type": "string"
+    },
+    "type": {
+      "additionalProperties": false,
+      "properties": {
+        "primary": {
+          "type": "string"
+        },
+        "secondary": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "type": "object"
+    }
+  },
+  "title": "Article Schema.",
+  "type": "object"
+}

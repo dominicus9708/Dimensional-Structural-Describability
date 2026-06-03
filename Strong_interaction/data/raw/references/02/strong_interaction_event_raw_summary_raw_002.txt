@@ -1,0 +1,20 @@
+Strong_interaction event-level raw discovery/download summary
+==========================================================
+Generated UTC: 2026-06-03T18:51:07+00:00
+Script version: 002
+
+Candidate URLs discovered: 325
+Candidates with verified >= 10000 events: 0
+Download attempted: 0
+Downloaded successfully: 0
+Total downloaded bytes: 0
+
+Interpretation:
+- Successful downloads in source_tables/02 are raw event/data candidates, not final numerical input.
+- If no candidate has verified 10000+ event count, inspect the candidate registry manually or rerun with --download-unverified only for reviewed URLs.
+- A later cleaner must inspect file structure and event counts before cleaned_tables/input promotion.
+
+Candidate registry: D:\Paper\Dimensional_Structural_Describability\Strong_interaction\data\raw\references\02\strong_interaction_event_raw_candidate_registry_raw_002.csv
+Discovery manifest: D:\Paper\Dimensional_Structural_Describability\Strong_interaction\data\raw\references\02\strong_interaction_event_raw_discovery_manifest_raw_002.csv
+Download manifest: D:\Paper\Dimensional_Structural_Describability\Strong_interaction\data\raw\references\02\strong_interaction_event_raw_download_manifest_raw_002.csv
+Downloaded data directory: D:\Paper\Dimensional_Structural_Describability\Strong_interaction\data\raw\source_tables\02\event_raw_candidates

@@ -1,12 +1,12 @@
 Strong_interaction event raw shortlist download summary
 =====================================================
-Generated UTC: 2026-06-03T12:13:20+00:00
+Generated UTC: 2026-06-03T20:33:42+00:00
 Script version: 002
 
-Shortlist rows: 3
-Attempted downloads: 0
-Successful downloads: 0
-Total downloaded bytes: 0
+Shortlist rows: 112
+Attempted downloads: 20
+Successful downloads: 20
+Total downloaded bytes: 355267
 
 Interpretation:
 - Downloaded files are raw candidates only, not final numerical input.

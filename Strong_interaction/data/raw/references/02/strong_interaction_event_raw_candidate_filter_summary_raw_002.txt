@@ -1,16 +1,16 @@
 Strong_interaction event raw candidate filter summary
 ===================================================
-Generated UTC: 2026-06-03T11:28:38+00:00
+Generated UTC: 2026-06-03T18:57:19+00:00
 Script version: 002
 
-Input candidates: 323
-Shortlist candidates: 3
-Needs probe extensionless candidates: 302
-Rejected/low priority candidates: 320
-HTTP probing enabled: False
+Input candidates: 325
+Shortlist candidates: 112
+Needs probe extensionless candidates: 138
+Rejected/low priority candidates: 213
+HTTP probing enabled: True
 
 Top extension counts:
-- [no_extension]: 306
+- [no_extension]: 308
 - .pdf: 8
 - .json: 3
 - .js: 3
@@ -19,13 +19,15 @@ Top extension counts:
 - .%20(2021: 1
 
 Decision counts:
-- needs_probe_extensionless: 302
+- needs_probe_extensionless: 138
+- shortlist_probe_filelike_content: 109
+- reject_page_content_type: 57
 - reject_or_low_priority: 18
 - shortlist: 3
 
 Top domain counts:
 - inspirehep.net: 127
-- opendata.cern.ch: 61
+- opendata.cern.ch: 63
 - zenodo.org: 57
 - cds.cern.ch: 20
 - gitlab.cern.ch: 4
