@@ -1,0 +1,51 @@
+Strong_interaction event raw candidate filter summary
+===================================================
+Generated UTC: 2026-06-03T11:28:38+00:00
+Script version: 002
+
+Input candidates: 323
+Shortlist candidates: 3
+Needs probe extensionless candidates: 302
+Rejected/low priority candidates: 320
+HTTP probing enabled: False
+
+Top extension counts:
+- [no_extension]: 306
+- .pdf: 8
+- .json: 3
+- .js: 3
+- .html,: 1
+- .14235v2: 1
+- .%20(2021: 1
+
+Decision counts:
+- needs_probe_extensionless: 302
+- reject_or_low_priority: 18
+- shortlist: 3
+
+Top domain counts:
+- inspirehep.net: 127
+- opendata.cern.ch: 61
+- zenodo.org: 57
+- cds.cern.ch: 20
+- gitlab.cern.ch: 4
+- github.com: 4
+- delphi-www.web.cern.ch: 3
+- cms.cern: 3
+- cernlib.web.cern.ch: 2
+- opendata-forum.cern.ch: 2
+- delphiwww.cern.ch: 2
+- cvmfs.readthedocs.io: 2
+- atlas.cern: 2
+- oss.maxcdn.com: 2
+- doi.org: 1
+- gitlab-registry.cern.ch: 1
+- podman.io: 1
+- www.docker.com: 1
+- eoscta.docs.cern.ch: 1
+- eos-web.web.cern.ch: 1
+
+Interpretation:
+- Use shortlist only for reviewed raw-data download attempts.
+- Empty-extension candidates should not be downloaded blindly. Probe them first.
+- PDF/JS/HTML candidates are normally not event-level raw data.
