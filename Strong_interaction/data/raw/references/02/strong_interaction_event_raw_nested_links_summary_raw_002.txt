@@ -1,0 +1,34 @@
+Strong_interaction nested event/raw link extraction summary
+========================================================
+Generated UTC: 2026-06-03T20:55:36+00:00
+Script version: 002
+
+Downloaded manifest rows inspected: 20
+Downloaded files found locally: 20
+Unique nested URLs found: 259
+Nested shortlist targets: 30
+Nested rejected/review candidates: 229
+
+Decision counts:
+- review_nested_candidate: 203
+- shortlist_nested_download_target: 30
+- reject_nested_low_priority: 26
+
+Top extension counts:
+- .al: 109
+- [no_extension]: 90
+- .pdf: 18
+- .xsdst: 15
+- .fadana: 8
+- .dat: 7
+- .png: 6
+- .json: 4
+- .14235v2: 1
+- .html: 1
+
+Interpretation:
+- Shortlist rows are nested candidates for the next download step.
+- They are still not verified event-level data.
+- Prioritize high-value file extensions and CERN Open Data URLs.
+All nested links: D:\Paper\Dimensional_Structural_Describability\Strong_interaction\data\raw\references\02\strong_interaction_event_raw_nested_links_raw_002.csv
+Shortlist: D:\Paper\Dimensional_Structural_Describability\Strong_interaction\data\raw\references\02\strong_interaction_event_raw_nested_links_shortlist_raw_002.csv
