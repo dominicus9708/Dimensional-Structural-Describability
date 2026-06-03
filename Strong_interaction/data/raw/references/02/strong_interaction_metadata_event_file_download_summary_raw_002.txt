@@ -1,0 +1,20 @@
+Strong_interaction metadata-derived event file download summary
+=============================================================
+Generated UTC: 2026-06-03T23:12:16+00:00
+Script version: 002
+
+Shortlist rows: 45
+Attempted downloads: 45
+Successful downloads: 24
+Total downloaded bytes: 192556
+
+Classification counts:
+- not_downloaded: 21
+- small_dat_or_metadata_candidate: 24
+
+Interpretation:
+- Downloaded files are metadata-derived raw candidates, not final numerical input.
+- DELPHI-specific .xdst/.xsdst/.dst/.fadana/.al candidates may require DELPHI software or format documentation.
+- A later inventory step must inspect file signatures and event-count evidence.
+Download directory: D:\Paper\Dimensional_Structural_Describability\Strong_interaction\data\raw\source_tables\02\metadata_event_file_downloads
+Manifest: D:\Paper\Dimensional_Structural_Describability\Strong_interaction\data\raw\references\02\strong_interaction_metadata_event_file_download_manifest_raw_002.csv
