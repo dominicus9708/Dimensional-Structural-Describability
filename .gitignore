@@ -1,0 +1,24 @@
+
+# Strong_interaction large raw downloads
+Strong_interaction/data/raw/source_tables/02/nested_event_downloads/
+Strong_interaction/data/raw/source_tables/02/event_raw_shortlist_downloads/
+Strong_interaction/data/raw/source_tables/02/discovery_pages/
+
+# Strong_interaction raw source archives and extracted heavy candidates
+Strong_interaction/data/raw/source_tables/01/source_archives/
+Strong_interaction/data/raw/source_tables/01/extracted_candidates/
+
+# Generic large scientific data files
+*.root
+*.h5
+*.hdf5
+*.parquet
+*.npy
+*.npz
+*.yoda
+*.yoda.h5
+*.tar
+*.tar.gz
+*.tgz
+*.zip
+*.gz

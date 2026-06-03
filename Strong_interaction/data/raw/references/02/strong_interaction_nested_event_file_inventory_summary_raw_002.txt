@@ -1,0 +1,22 @@
+Strong_interaction nested event file inventory summary
+====================================================
+Generated UTC: 2026-06-03T22:03:19+00:00
+Script version: 002
+
+Successful downloaded files inspected: 25
+Total inspected bytes: 3206256599
+
+Priority counts:
+- metadata: 18
+- support: 7
+
+Role counts:
+- metadata_json_or_record: 18
+- delphi_condition_or_detector_database: 7
+
+Interpretation:
+- DBcalb/DBgeom/DBlepm/DBrunt/DBscon/DBsysf are likely DELPHI condition/detector database support files unless event schema is proven.
+- ROOT/HDF5/Parquet magic signatures would be stronger event-level candidates.
+- Metadata JSON should be parsed for further record/file links.
+Inventory: D:\Paper\Dimensional_Structural_Describability\Strong_interaction\data\raw\references\02\strong_interaction_nested_event_file_inventory_raw_002.csv
+Priority candidates: D:\Paper\Dimensional_Structural_Describability\Strong_interaction\data\raw\references\02\strong_interaction_nested_event_priority_candidates_raw_002.csv

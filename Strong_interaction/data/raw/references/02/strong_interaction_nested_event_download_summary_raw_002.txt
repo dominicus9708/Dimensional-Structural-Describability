@@ -1,0 +1,22 @@
+Strong_interaction nested event target download summary
+====================================================
+Generated UTC: 2026-06-03T21:50:12+00:00
+Script version: 002
+
+Nested shortlist rows: 30
+Attempted downloads: 30
+Successful downloads: 25
+Total downloaded bytes: 3206256599
+
+Classification counts:
+- json_metadata_or_data: 2
+- large_dat_or_binary_candidate: 4
+- not_downloaded: 5
+- small_dat_or_metadata_candidate: 19
+
+Interpretation:
+- These are nested raw candidates, not final numerical input.
+- Large ROOT/HDF5/Parquet/archive files are the most relevant for 10000+ event checks.
+- JSON/small DAT files are usually metadata or condition-data candidates.
+Download directory: D:\Paper\Dimensional_Structural_Describability\Strong_interaction\data\raw\source_tables\02\nested_event_downloads
+Manifest: D:\Paper\Dimensional_Structural_Describability\Strong_interaction\data\raw\references\02\strong_interaction_nested_event_download_manifest_raw_002.csv
