@@ -1,0 +1,40 @@
+Strong_interaction metadata record file candidate summary
+========================================================
+Generated UTC: 2026-06-03T22:50:50+00:00
+Script version: 002
+
+Inventory rows read: 25
+Metadata rows parsed: 18
+Unique candidate URLs found: 901
+Shortlist event/file candidates: 45
+Rejected/review candidates: 856
+
+Decision counts:
+- review_metadata_candidate: 442
+- reject_low_priority_metadata_candidate: 414
+- shortlist_event_file_candidate: 45
+
+Top extension counts:
+- .al: 654
+- .xsdst: 90
+- .fadana: 48
+- .dat: 42
+- [no_extension]: 41
+- .pdf: 24
+- .json: 2
+
+Top reason counts:
+- event_or_dst_hint: 901
+- non_data_extension: 816
+- cern_api_files_endpoint: 450
+- support_or_doc_hint: 47
+- data_extension: 44
+- extensionless_api_or_record: 41
+- cern_api_records_endpoint: 8
+
+Interpretation:
+- Shortlist rows are next-stage raw acquisition candidates, not verified event data.
+- Prefer candidates with event/DST/xDST/FADANA/ROOT hints over condition DB or guide/doc links.
+- Download only reviewed shortlist rows in the next step.
+All candidates: D:\Paper\Dimensional_Structural_Describability\Strong_interaction\data\raw\references\02\strong_interaction_metadata_record_file_candidates_raw_002.csv
+Shortlist: D:\Paper\Dimensional_Structural_Describability\Strong_interaction\data\raw\references\02\strong_interaction_metadata_record_file_candidates_shortlist_raw_002.csv
