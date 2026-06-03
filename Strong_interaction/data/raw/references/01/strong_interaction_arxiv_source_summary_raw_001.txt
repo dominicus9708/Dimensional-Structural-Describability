@@ -1,0 +1,18 @@
+Strong_interaction arXiv source archive acquisition summary
+==========================================================
+Generated UTC: 2026-06-03T07:26:18+00:00
+Script version: 001
+
+Downloaded archives: 4/4
+Extracted candidate files: 204
+
+Interpretation:
+- These archives and extracted candidates are raw fallback source materials.
+- They are not final numerical benchmark input.
+- Review extracted candidates for tables, data availability links, and actual numeric arrays.
+- A later cleaner must convert confirmed numeric candidates into cleaned_tables before derived/input.
+
+Archives directory: D:\Paper\Dimensional_Structural_Describability\Strong_interaction\data\raw\source_tables\01\source_archives
+Extracted candidates directory: D:\Paper\Dimensional_Structural_Describability\Strong_interaction\data\raw\source_tables\01\extracted_candidates
+Download manifest: D:\Paper\Dimensional_Structural_Describability\Strong_interaction\data\raw\references\01\strong_interaction_arxiv_source_download_manifest_raw_001.csv
+Extraction manifest: D:\Paper\Dimensional_Structural_Describability\Strong_interaction\data\raw\references\01\strong_interaction_arxiv_source_extraction_manifest_raw_001.csv

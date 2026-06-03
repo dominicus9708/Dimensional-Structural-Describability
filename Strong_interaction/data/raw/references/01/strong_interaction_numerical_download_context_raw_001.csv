@@ -1,3 +1,0 @@
-﻿context_role,context_path,exists,row_count,note,created_utc
-source_registry_input_01,D:\Paper\Dimensional_Structural_Describability\Strong_interaction\data\derived\input\01\strong_interaction_source_registry_input_001.csv,True,6,Used as planning context only; numerical target URLs still come from explicit target registry.,2026-06-03T07:15:55+00:00
-missing_numerical_data_input_01,D:\Paper\Dimensional_Structural_Describability\Strong_interaction\data\derived\input\01\strong_interaction_missing_numerical_data_input_001.csv,True,3,Used as planning context only; numerical target URLs still come from explicit target registry.,2026-06-03T07:15:55+00:00

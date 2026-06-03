@@ -1,0 +1,21 @@
+{
+   "sources" : [
+      {
+         "usage" : "toplevel",
+         "filename" : "EEC.tex"
+      },
+      {
+         "usage" : "ignore",
+         "filename" : "EEC.bib"
+      },
+      {
+         "usage" : "ignore",
+         "filename" : "JHEP.bst"
+      }
+   ],
+   "spec_version" : 1,
+   "texlive_version" : "2025",
+   "process" : {
+      "compiler" : "pdflatex"
+   }
+}
