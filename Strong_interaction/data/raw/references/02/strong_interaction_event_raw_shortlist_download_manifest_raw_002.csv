@@ -1,0 +1,1 @@
+﻿candidate_id,source_id,data_url,offline_decision,offline_score,offline_reasons,probe_success,probe_content_type,download_attempted,success,download_status,http_status,content_type,content_length,validation_message,size_bytes,sha256,output_file,error,started_utc,finished_utc

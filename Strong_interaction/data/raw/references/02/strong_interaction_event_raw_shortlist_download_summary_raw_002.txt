@@ -1,0 +1,16 @@
+Strong_interaction event raw shortlist download summary
+=====================================================
+Generated UTC: 2026-06-03T12:13:20+00:00
+Script version: 002
+
+Shortlist rows: 3
+Attempted downloads: 0
+Successful downloads: 0
+Total downloaded bytes: 0
+
+Interpretation:
+- Downloaded files are raw candidates only, not final numerical input.
+- HTML is blocked by default.
+- A later cleaner must inspect file type, structure, and event count.
+Download directory: D:\Paper\Dimensional_Structural_Describability\Strong_interaction\data\raw\source_tables\02\event_raw_shortlist_downloads
+Manifest: D:\Paper\Dimensional_Structural_Describability\Strong_interaction\data\raw\references\02\strong_interaction_event_raw_shortlist_download_manifest_raw_002.csv
