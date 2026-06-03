@@ -115,7 +115,7 @@ def file_extension_from_url(url: str) -> str:
 
 
 def normalize_url(url: str, base_url: str = "https://opendata.cern.ch") -> str:
-    url = url.strip().rstrip(".,;:)"]}")
+    url = url.strip().rstrip(".,;:)]}\"'")
     if url.startswith("http://") or url.startswith("https://"):
         return url
     if url.startswith("/"):
@@ -261,7 +261,6 @@ def main() -> int:
             continue
         all_rows.extend(extract_links_from_file(path, row))
 
-    # Deduplicate nested_url while preserving best score.
     best: dict[str, dict[str, Any]] = {}
     for row in all_rows:
         url = row["nested_url"]
