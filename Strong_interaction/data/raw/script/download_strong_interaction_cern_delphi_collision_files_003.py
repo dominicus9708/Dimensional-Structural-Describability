@@ -1,14 +1,20 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""
-download_strong_interaction_cern_delphi_collision_files_003.py
 
-Controlled downloader for batch-03 DELPHI collision-data file candidates.
+from __future__ import annotations
 
-Author: Kwon Dominicus
+import argparse
+import csv
+import datetime as dt
+import pathlib
+import re
+import shutil
+import subprocess
+import sys
+from typing import Any, Iterable
 
-Purpose
--------
-The batch-03 record/file parser identified DELPHI collision-data file candidates,
-mostly in CERN EOS public paths such as:
+RAW_BATCH = "03"
+SCRIPT_VERSION = "003"
 
+
+def utc_now() -> str:
