@@ -1,12 +1,12 @@
 Strong_interaction CERN DELPHI collision file download summary
 ============================================================
-Generated UTC: 2026-06-05T03:48:52+00:00
+Generated UTC: 2026-06-05T04:19:23+00:00
 Script version: 003
 
-Rows attempted: 1
-Successful downloads: 1
-Root-scheme candidates: 1
-Total downloaded bytes: 68705280
+Rows attempted: 5
+Successful downloads: 5
+Root-scheme candidates: 5
+Total downloaded bytes: 370713600
 Try-download enabled: True
 
 Interpretation:

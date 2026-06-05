@@ -31,3 +31,6 @@ Strong_interaction/data/raw/references/03/strong_interaction_cern_delphi_record_
 # Strong_interaction batch 03 raw/search heavy local outputs
 Strong_interaction/data/raw/source_tables/03/
 Strong_interaction/data/raw/source_tables/03/collision_file_downloads/
+
+# Strong_interaction batch 03 downloaded DELPHI collision files
+Strong_interaction/data/raw/source_tables/03/collision_file_downloads/
