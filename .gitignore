@@ -22,3 +22,12 @@ Strong_interaction/data/raw/source_tables/01/extracted_candidates/
 *.tgz
 *.zip
 *.gz
+
+# Strong_interaction batch 03 large generated candidate registries
+Strong_interaction/data/raw/references/03/strong_interaction_cern_delphi_record_file_candidates_raw_003.csv
+Strong_interaction/data/raw/references/03/strong_interaction_cern_delphi_record_file_candidates_rejected_raw_003.csv
+Strong_interaction/data/raw/references/03/strong_interaction_cern_delphi_record_file_candidates_collision_shortlist_raw_003.csv
+
+# Strong_interaction batch 03 raw/search heavy local outputs
+Strong_interaction/data/raw/source_tables/03/
+Strong_interaction/data/raw/source_tables/03/collision_file_downloads/

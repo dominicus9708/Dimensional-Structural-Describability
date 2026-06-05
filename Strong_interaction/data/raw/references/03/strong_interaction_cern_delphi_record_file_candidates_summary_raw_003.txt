@@ -1,0 +1,49 @@
+Strong_interaction CERN DELPHI record file candidate summary
+============================================================
+Generated UTC: 2026-06-05T02:12:28+00:00
+Script version: 003
+
+Record shortlist rows read: 599
+Records found in saved search pages: 599
+Unique file candidates: 179315
+Collision file download shortlist: 87219
+Rejected/review file candidates: 92096
+
+Record category counts:
+- simulation_data: 92017
+- collision_data: 87295
+- other_record: 3
+
+Decision counts:
+- shortlist_collision_file_download: 87219
+- review_file_candidate: 86365
+- reject_file_candidate: 5731
+
+Top extension counts:
+- .xsdst: 70841
+- .al: 61281
+- .sl: 26208
+- .fadana: 14825
+- [no_extension]: 1432
+- .sdst: 513
+- .fadsim: 370
+- .10: 13
+- .100: 13
+- .101: 13
+- .103: 13
+- .104: 13
+- .105: 13
+- .107: 13
+- .108: 13
+- .11: 13
+- .110: 13
+- .111: 13
+- .112: 13
+- .113: 13
+
+Interpretation:
+- Collision shortlist is the first priority for controlled raw download.
+- Simulation records are preserved but not prioritized for the first 10000+ real-data benchmark.
+- Do not download the full file list at once; use --limit in the next downloader.
+All file candidates: D:\Paper\Dimensional_Structural_Describability\Strong_interaction\data\raw\references\03\strong_interaction_cern_delphi_record_file_candidates_raw_003.csv
+Collision shortlist: D:\Paper\Dimensional_Structural_Describability\Strong_interaction\data\raw\references\03\strong_interaction_cern_delphi_record_file_candidates_collision_shortlist_raw_003.csv

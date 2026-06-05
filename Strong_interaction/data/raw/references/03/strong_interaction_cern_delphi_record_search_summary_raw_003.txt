@@ -1,0 +1,30 @@
+Strong_interaction CERN DELPHI record search summary
+==================================================
+Generated UTC: 2026-06-04T11:32:54+00:00
+Script version: 003
+Raw batch: 03
+
+Search queries: 17
+Search responses saved: 17
+Unique record candidates: 602
+Shortlist records for file parsing: 599
+Rejected/review records: 3
+
+Decision counts:
+- shortlist_record_for_file_parsing: 599
+- review_record_candidate: 3
+
+Top reason counts:
+- delphi_context: 602
+- event_or_data_hint: 602
+- filelike_metadata_present: 602
+- support_or_doc_hint: 598
+- delphi_event_format_hint: 598
+- documentation_hint: 37
+
+Interpretation:
+- Batch 03 starts a new record-level route because batch 02 reached support DBs and invalid api/files endpoints.
+- Shortlist records should be parsed for file lists before downloading any large raw files.
+- Do not treat record-level candidates as event data until file-level inspection confirms event/DST/xDST/FADANA content.
+Search manifest: D:\Paper\Dimensional_Structural_Describability\Strong_interaction\data\raw\references\03\strong_interaction_cern_delphi_record_search_manifest_raw_003.csv
+Record shortlist: D:\Paper\Dimensional_Structural_Describability\Strong_interaction\data\raw\references\03\strong_interaction_cern_delphi_record_candidates_shortlist_raw_003.csv
