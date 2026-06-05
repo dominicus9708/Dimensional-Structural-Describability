@@ -1,0 +1,16 @@
+Strong_interaction CERN DELPHI collision file download summary
+============================================================
+Generated UTC: 2026-06-05T03:48:52+00:00
+Script version: 003
+
+Rows attempted: 1
+Successful downloads: 1
+Root-scheme candidates: 1
+Total downloaded bytes: 68705280
+Try-download enabled: True
+
+Interpretation:
+- Without --try-download this script only records whether candidates require XRootD.
+- root:// URLs normally require xrdcp or an HTTP gateway.
+- Use small --limit values before any larger acquisition.
+Manifest: D:\Paper\Dimensional_Structural_Describability\Strong_interaction\data\raw\references\03\strong_interaction_cern_delphi_collision_file_download_manifest_raw_003.csv
