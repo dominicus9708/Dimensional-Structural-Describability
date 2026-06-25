@@ -1,0 +1,38 @@
+{
+  "status": "pass",
+  "scope": "finite D2 vector-static descriptor benchmark; combined ten selected-domain hold-out seeds",
+  "toy_model_selection": {
+    "name": "D2 carrier-boundary-connectivity multi-target vector benchmark",
+    "cases": 495936,
+    "selected_domain_holdout_seeds": [20260625, 20260634]
+  },
+  "descriptor": {
+    "classification": "vector static",
+    "component_order": ["D_act", "D_cap", "D_exp", "D_bnd", "D_conn"]
+  },
+  "repeat_summary": {
+    "restriction_survival": {
+      "shared_scalar": {"mae": {"mean": 0.07268039266469543, "population_std": 0.0017605742141258505}, "rmse": {"mean": 0.09442535292274931, "population_std": 0.001685847006935711}, "r2": {"mean": 0.8105127257963438, "population_std": 0.009235846323009193}},
+      "task_specific_scalar": {"mae": {"mean": 0.04756881564826178, "population_std": 0.00041618943541979513}, "rmse": {"mean": 0.06028187068673615, "population_std": 0.0004722277751946614}, "r2": {"mean": 0.9228100919333329, "population_std": 0.002125800180793711}},
+      "vector_static": {"mae": {"mean": 0.04543562560623075, "population_std": 0.0002453626585183712}, "rmse": {"mean": 0.055931107747580554, "population_std": 0.0003456598378465763}, "r2": {"mean": 0.9335532494597214, "population_std": 0.0016470594833194272}},
+      "vector_vs_shared_scalar": {"mae_reduction_percent": {"mean": 37.455503851350464, "population_std": 1.2779261930626153}, "rmse_reduction_percent": {"mean": 40.753316665062506, "population_std": 0.7973648175675534}, "all_runs_mae_improved": true, "all_runs_rmse_improved": true, "all_runs_r2_improved": true}
+    },
+    "restriction_connectivity": {
+      "shared_scalar": {"mae": {"mean": 0.139467716775664, "population_std": 0.001553093818539253}, "rmse": {"mean": 0.18547350102906549, "population_std": 0.0013454303609786126}, "r2": {"mean": 0.269658856350509, "population_std": 0.006501599453017154}},
+      "task_specific_scalar": {"mae": {"mean": 0.06942261489751925, "population_std": 0.0008206913070797915}, "rmse": {"mean": 0.09274054914950221, "population_std": 0.0009323961384776009}, "r2": {"mean": 0.8174005502994076, "population_std": 0.0023580116097132353}},
+      "vector_static": {"mae": {"mean": 0.06065153313706456, "population_std": 0.0005644030004985759}, "rmse": {"mean": 0.0822461271723028, "population_std": 0.0006200681028722387}, "r2": {"mean": 0.8563823162073533, "population_std": 0.0017999715575018479}},
+      "vector_vs_shared_scalar": {"mae_reduction_percent": {"mean": 56.50887649720255, "population_std": 0.4621272435539485}, "rmse_reduction_percent": {"mean": 55.65501649135408, "population_std": 0.3272016611328373}, "all_runs_mae_improved": true, "all_runs_rmse_improved": true, "all_runs_r2_improved": true}
+    },
+    "selected_inactive_interface_reach": {
+      "shared_scalar": {"mae": {"mean": 0.41346030936717104, "population_std": 0.004622054502047238}, "rmse": {"mean": 0.4439100873661629, "population_std": 0.0031725179622950476}, "r2": {"mean": -0.005785770690697678, "population_std": 0.004490312109294747}},
+      "task_specific_scalar": {"mae": {"mean": 0.2811977280775522, "population_std": 0.003755879572840142}, "rmse": {"mean": 0.34575370955765283, "population_std": 0.0038149962392330762}, "r2": {"mean": 0.38982202528726095, "population_std": 0.008500125708382095}},
+      "vector_static": {"mae": {"mean": 0.27929320083874887, "population_std": 0.004075228070014143}, "rmse": {"mean": 0.3435339222281609, "population_std": 0.0038149389566646814}, "r2": {"mean": 0.3976573106127672, "population_std": 0.006399921505261186}},
+      "vector_vs_shared_scalar": {"mae_reduction_percent": {"mean": 32.45211060740289, "population_std": 0.3079117553144941}, "rmse_reduction_percent": {"mean": 22.613240949210937, "population_std": 0.4612740736174429}, "all_runs_mae_improved": true, "all_runs_rmse_improved": true, "all_runs_r2_improved": true}
+    },
+    "shared_theta": {
+      "component_order": ["D_act", "D_cap", "D_exp", "D_bnd", "D_conn"],
+      "mean": [0.38999999999999996, 0.5999999999999999, 0.01, 0.0, 0.0],
+      "population_std": [0.030000000000000006, 1.1102230246251565e-16, 0.03, 0.0, 0.0]
+    }
+  }
+}
