@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "purpose": "Reusable internal registry for separating static/dynamic and scalar/vector descriptor layers without renaming formal paper terms.",
   "classification_rules": {
     "scalar_static": "A fixed admissible configuration p is mapped to one real value; no explicit time variable is present.",
@@ -10,113 +10,21 @@
     "vector_dynamic": "A time-dependent vector-valued descriptor or coupled multi-channel state. No implemented instance is currently registered."
   },
   "descriptors": [
-    {
-      "id": "toy_Dw_single",
-      "formal_label": "D_w toy analogue",
-      "internal_layer": "scalar static",
-      "classification": "scalar_static",
-      "codomain": "R",
-      "time_dependence": "none",
-      "implementation_status": "implemented",
-      "source": "src/structural/script/run_d2_nchannel_static_toy.py::single_channel_toy_dw",
-      "notes": "N=1 recovery target based on the active-relation channel."
-    },
-    {
-      "id": "toy_channel_vector",
-      "formal_label": "D2 channel tuple",
-      "internal_layer": "vector static",
-      "classification": "vector_static",
-      "codomain": "R^3",
-      "time_dependence": "none",
-      "implementation_status": "implemented intermediate representation",
-      "source": "src/structural/script/run_d2_nchannel_static_toy.py::channel_descriptors",
-      "notes": "This is an implemented three-component static channel vector. It is not yet the final paper-level Static Structural Descriptor Vector."
-    },
-    {
-      "id": "toy_Dtheta_fixed",
-      "formal_label": "N-channel scalar descriptor",
-      "internal_layer": "scalar static projection",
-      "classification": "scalar_static_projection",
-      "codomain": "R",
-      "time_dependence": "none",
-      "implementation_status": "implemented",
-      "source": "src/structural/script/run_d2_nchannel_static_toy.py::nchannel_descriptor",
-      "notes": "Fixed theta projection of the D2 channel tuple; three channels do not make this output vector-valued."
-    },
-    {
-      "id": "carrier_boundary_M0_M4",
-      "formal_label": "Carrier-boundary ablation descriptors M0--M4",
-      "internal_layer": "scalar static projections",
-      "classification": "scalar_static_projection",
-      "codomain": "R",
-      "time_dependence": "none",
-      "implementation_status": "implemented comparison models",
-      "source": "src/structural/script/run_d2_carrier_boundary_ablation.py",
-      "notes": "M0--M4 are scalar controlled projections. Their channel fields can serve as vector-static inputs, but each reported M-value is scalar."
-    },
-    {
-      "id": "formal_static_descriptor_vector",
-      "formal_label": "Static Structural Descriptor Vector",
-      "internal_layer": "vector static",
-      "classification": "vector_static",
-      "codomain": "R^m",
-      "time_dependence": "none",
-      "implementation_status": "proposed; definition not yet closed",
-      "source": "current static-formulation discussion",
-      "notes": "Candidate components include active relation, internal capacity, exposure, boundary treatment, and connectivity. Formal component definitions remain to be fixed."
-    },
-    {
-      "id": "Dw_time",
-      "formal_label": "D_w(t)",
-      "internal_layer": "scalar dynamic",
-      "classification": "scalar_dynamic",
-      "codomain": "R",
-      "time_dependence": "explicit t",
-      "implementation_status": "paper-level; outside this static package",
-      "source": "third-paper dynamics formulation",
-      "notes": "A time-dependent scalar aggregate."
-    },
-    {
-      "id": "alpha_scalar_field_time",
-      "formal_label": "alpha(x,t)",
-      "internal_layer": "scalar-field dynamic",
-      "classification": "scalar_field_dynamic",
-      "codomain": "scalar field",
-      "time_dependence": "explicit t",
-      "implementation_status": "paper-level; outside this static package",
-      "source": "third-paper local transport-relaxation formulation",
-      "notes": "The local value is scalar; the transport velocity may be vector-valued without making alpha itself a vector descriptor."
-    },
-    {
-      "id": "formal_vector_dynamic",
-      "formal_label": "coupled vector descriptor dynamics",
-      "internal_layer": "vector dynamic",
-      "classification": "vector_dynamic",
-      "codomain": "R^m or vector field",
-      "time_dependence": "explicit t",
-      "implementation_status": "not yet defined",
-      "source": "future extension",
-      "notes": "Not part of the current static work and not required for the present audit."
-    }
+    {"id":"toy_Dw_single","formal_label":"D_w toy analogue","internal_layer":"scalar static","classification":"scalar_static","codomain":"R","time_dependence":"none","implementation_status":"implemented","source":"src/structural/script/run_d2_nchannel_static_toy.py::single_channel_toy_dw","notes":"N=1 recovery target based on the active-relation channel."},
+    {"id":"toy_channel_vector","formal_label":"D2 channel tuple","internal_layer":"vector static","classification":"vector_static","codomain":"R^3","time_dependence":"none","implementation_status":"implemented intermediate representation","source":"src/structural/script/run_d2_nchannel_static_toy.py::channel_descriptors","notes":"This is an implemented three-component static channel vector. It is not yet the final paper-level Static Structural Descriptor Vector."},
+    {"id":"toy_Dtheta_fixed","formal_label":"N-channel scalar descriptor","internal_layer":"scalar static projection","classification":"scalar_static_projection","codomain":"R","time_dependence":"none","implementation_status":"implemented","source":"src/structural/script/run_d2_nchannel_static_toy.py::nchannel_descriptor","notes":"Fixed theta projection of the D2 channel tuple; three channels do not make this output vector-valued."},
+    {"id":"carrier_boundary_M0_M4","formal_label":"Carrier-boundary ablation descriptors M0--M4","internal_layer":"scalar static projections","classification":"scalar_static_projection","codomain":"R","time_dependence":"none","implementation_status":"implemented comparison models","source":"src/structural/script/run_d2_carrier_boundary_ablation.py","notes":"M0--M4 are scalar controlled projections. Their channel fields can serve as vector-static inputs, but each reported M-value is scalar."},
+    {"id":"d2_vector_static_multitarget","formal_label":"D2 carrier-boundary-connectivity vector-static descriptor","internal_layer":"vector static","classification":"vector_static","codomain":"R^5","time_dependence":"none","implementation_status":"implemented D2 toy-model candidate","source":"src/structural/script/run_d2_vector_static_multitarget_toy.py","notes":"The five components are active relation, carrier capacity, carrier exposure, status-aware boundary shielding, and active-graph reachability. This is a finite D2 candidate used to test the need for a vector-static layer; it is not the final paper-level definition."},
+    {"id":"d2_vector_shared_scalar_projection","formal_label":"Shared scalar projection of D2 vector-static descriptor","internal_layer":"scalar static projection","classification":"scalar_static_projection","codomain":"R","time_dependence":"none","implementation_status":"implemented D2 comparison model","source":"src/structural/script/run_d2_vector_static_multitarget_toy.py","notes":"One nonnegative theta on the five-component vector is chosen jointly for all three D2 targets."},
+    {"id":"formal_static_descriptor_vector","formal_label":"Static Structural Descriptor Vector","internal_layer":"vector static","classification":"vector_static","codomain":"R^m","time_dependence":"none","implementation_status":"proposed; definition not yet closed","source":"current static-formulation discussion","notes":"The D2 five-component toy candidate informs the later formal definition. Formal component definitions and general propositions remain to be fixed."},
+    {"id":"Dw_time","formal_label":"D_w(t)","internal_layer":"scalar dynamic","classification":"scalar_dynamic","codomain":"R","time_dependence":"explicit t","implementation_status":"paper-level; outside this static package","source":"third-paper dynamics formulation","notes":"A time-dependent scalar aggregate."},
+    {"id":"alpha_scalar_field_time","formal_label":"alpha(x,t)","internal_layer":"scalar-field dynamic","classification":"scalar_field_dynamic","codomain":"scalar field","time_dependence":"explicit t","implementation_status":"paper-level; outside this static package","source":"third-paper local transport-relaxation formulation","notes":"The local value is scalar; the transport velocity may be vector-valued without making alpha itself a vector descriptor."},
+    {"id":"formal_vector_dynamic","formal_label":"coupled vector descriptor dynamics","internal_layer":"vector dynamic","classification":"vector_dynamic","codomain":"R^m or vector field","time_dependence":"explicit t","implementation_status":"not yet defined","source":"future extension","notes":"Not part of the current static work and not required for the present audit."}
   ],
   "reference_results": [
-    {
-      "id": "predictive_holdout_20260625",
-      "relative_path": "results/structural/20260625_134516/summary.json",
-      "kind": "scalar projection predictive benchmark",
-      "expected_status": "pass"
-    },
-    {
-      "id": "predictive_robustness_20seed",
-      "relative_path": "results/structural/20260625_134523_robustness/robustness_summary.json",
-      "kind": "scalar projection repeated hold-out benchmark",
-      "expected_status": "pass"
-    },
-    {
-      "id": "carrier_boundary_ablation_10seed",
-      "relative_path": "results/structural/20260625_142900_carrier_boundary_ablation_10seed/summary.json",
-      "kind": "scalar projection carrier-boundary ablation",
-      "expected_status": "pass"
-    }
+    {"id":"predictive_holdout_20260625","relative_path":"results/structural/20260625_134516/summary.json","kind":"scalar projection predictive benchmark","expected_status":"pass"},
+    {"id":"predictive_robustness_20seed","relative_path":"results/structural/20260625_134523_robustness/robustness_summary.json","kind":"scalar projection repeated hold-out benchmark","expected_status":"pass"},
+    {"id":"carrier_boundary_ablation_10seed","relative_path":"results/structural/20260625_142900_carrier_boundary_ablation_10seed/summary.json","kind":"scalar projection carrier-boundary ablation","expected_status":"pass"},
+    {"id":"vector_static_multitarget_10seed","relative_path":"results/structural/20260625_152400_vector_static_multitarget_10seed/compact_summary.json","kind":"vector-static multi-target toy benchmark","expected_status":"pass"}
   ]
 }
