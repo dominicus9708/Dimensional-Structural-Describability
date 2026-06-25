@@ -51,6 +51,19 @@ M4  boundary-clause-aware channels, integrated over C
 
 See `CARRIER_BOUNDARY_ABLATION_SPEC.md` for the controlled formulas and `RESULTS_CARRIER_BOUNDARY_ABLATION_20260625.md` for the ten-split result note.
 
+## D. Static-descriptor layer audit
+
+`descriptor_registry.json` is an internal layer map. It does not change formal paper terminology. It records whether each expression is static/dynamic and scalar/vector, and distinguishes a vector channel tuple from a scalar projection of that tuple.
+
+`run_static_descriptor_audit.py` reuses the existing D2 code. It checks that:
+
+1. `channel_descriptors` is the implemented three-component vector-static intermediate representation;
+2. `nchannel_descriptor` is exactly the scalar projection \(\boldsymbol\theta^{\mathsf T}\mathbf D\);
+3. the \(N=1\) projection recovers the one-channel toy \(D_w\) analogue;
+4. recorded predictive and carrier--boundary result summaries remain readable and marked `pass`.
+
+See `STATIC_DESCRIPTOR_LAYER_MAP.md` for the formal internal classification rule.
+
 ## Local project location
 
 ```text
@@ -91,13 +104,33 @@ python .\src\structural\script\run_d2_nchannel_predictive_robustness.py `
 # Carrier--boundary ablation dependency
 py -m pip install -r .\requirements-ablation.txt
 
-# Default two-split carrier--boundary ablation
-python .\src\structural\script\run_d2_carrier_boundary_ablation.py `
-  --output-root .\results\structural
-
 # Ten selected-domain hold-out splits
 python .\src\structural\script\run_d2_carrier_boundary_ablation.py `
   --output-root .\results\structural `
   --first-seed 20260625 `
   --repeat-count 10
+
+# Fast layer and stored-result audit
+python .\src\structural\script\run_static_descriptor_audit.py `
+  --project-root . `
+  --output-root .\results\structural `
+  --rerun none
+
+# Re-run the existing axiom-consistency script, then audit
+python .\src\structural\script\run_static_descriptor_audit.py `
+  --project-root . `
+  --output-root .\results\structural `
+  --rerun structure
+
+# Re-run existing predictive scripts without writing a new formula
+python .\src\structural\script\run_static_descriptor_audit.py `
+  --project-root . `
+  --output-root .\results\structural `
+  --rerun predictive
+
+# Re-run every existing benchmark, including the 10-split ablation
+python .\src\structural\script\run_static_descriptor_audit.py `
+  --project-root . `
+  --output-root .\results\structural `
+  --rerun full
 ```
