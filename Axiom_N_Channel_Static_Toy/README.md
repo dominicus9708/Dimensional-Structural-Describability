@@ -1,6 +1,6 @@
 # D2 N-Channel Static Toy Model
 
-This package contains two finite tests on the current \(3\times3\) D2 realization of the Structural Admissibility axiom system.
+This package contains two distinct finite tests on the current \(3\times3\) D2 realization of the Structural Admissibility axiom system.
 
 ## Scope
 
@@ -33,37 +33,6 @@ The train/test split is by selected carrier \(S\), stratified by \(|S|\), so rec
 
 `run_d2_nchannel_predictive_robustness.py` repeats this carrier-level hold-out comparison over multiple seeds.
 
-## C. Carrier--boundary ablation
-
-`run_d2_carrier_boundary_ablation.py` separates a historical-style selected-domain N-channel surrogate from the current active-carrier plus boundary-clause form.
-
-The comparison regime explicitly permits \(C\subseteq S\) and `blocked`/`interface` boundary labels. The canonical D2 regime remains the all-blocked, carrier-exact subset. `interface` is a label only and does not activate a relation after gluing.
-
-The ablation compares:
-
-```text
-M0  one-channel selected-domain baseline
-M1  old-style 3-channel aggregation over S
-M2  M1 fields, integrated over C
-M3  M1 support with a boundary-clause-aware third channel
-M4  boundary-clause-aware channels, integrated over C
-```
-
-See `CARRIER_BOUNDARY_ABLATION_SPEC.md` for the controlled formulas and `RESULTS_CARRIER_BOUNDARY_ABLATION_20260625.md` for the ten-split result note.
-
-## D. Static-descriptor layer audit
-
-`descriptor_registry.json` is an internal layer map. It does not change formal paper terminology. It records whether each expression is static/dynamic and scalar/vector, and distinguishes a vector channel tuple from a scalar projection of that tuple.
-
-`run_static_descriptor_audit.py` reuses the existing D2 code. It checks that:
-
-1. `channel_descriptors` is the implemented three-component vector-static intermediate representation;
-2. `nchannel_descriptor` is exactly the scalar projection \(\boldsymbol\theta^{\mathsf T}\mathbf D\);
-3. the \(N=1\) projection recovers the one-channel toy \(D_w\) analogue;
-4. recorded predictive and carrier--boundary result summaries remain readable and marked `pass`.
-
-See `STATIC_DESCRIPTOR_LAYER_MAP.md` for the formal internal classification rule.
-
 ## Local project location
 
 ```text
@@ -72,7 +41,7 @@ D:\Paper\Dimensional_Structural_Describability\Axiom_N_Channel_Static_Toy
 
 ## Input
 
-No external data files are required. Each script encodes the D2 lattice directly from the current axiom manuscript.
+No external files are required. Each script encodes the D2 lattice directly from the current axiom manuscript.
 
 ## Output
 
@@ -81,6 +50,8 @@ Each run creates a timestamped output folder below:
 ```text
 results\structural\YYYYMMDD_HHMMSS\
 ```
+
+The predictive run writes `summary.json`, `test_report.md`, `carrier_split.json`, and `holdout_predictions.csv`. The robustness run writes `robustness_summary.json` and `robustness_report.md`.
 
 ## PowerShell
 
@@ -100,16 +71,42 @@ python .\src\structural\script\run_d2_nchannel_predictive_robustness.py `
   --output-root .\results\structural `
   --first-seed 20260625 `
   --repeat-count 20
+```
 
-# Carrier--boundary ablation dependency
+## Carrier--boundary ablation
+
+`src/structural/script/run_d2_carrier_boundary_ablation.py` is a controlled comparison between a historical-style selected-domain N-channel surrogate and the current active-carrier plus boundary-clause form.
+
+It requires NumPy only:
+
+```powershell
 py -m pip install -r .\requirements-ablation.txt
 
-# Ten selected-domain hold-out splits
+# Two carrier-level hold-out splits (the default reproducibility run)
+python .\src\structural\script\run_d2_carrier_boundary_ablation.py `
+  --output-root .\results\structural
+
+# Ten splits, written as one result directory
 python .\src\structural\script\run_d2_carrier_boundary_ablation.py `
   --output-root .\results\structural `
   --first-seed 20260625 `
   --repeat-count 10
+```
 
+The regime is an explicit comparison extension: \(C\subseteq S\) and `interface` labels are allowed. The canonical D2 regime remains its all-blocked carrier-exact subset. See `CARRIER_BOUNDARY_ABLATION_SPEC.md` for the model definition and `RESULTS_CARRIER_BOUNDARY_ABLATION_20260625.md` for the 10-split result note.
+
+## D. Static-descriptor layer audit
+
+`descriptor_registry.json` is an internal layer map. It does not change formal paper terminology. It records whether each expression is static/dynamic and scalar/vector, and distinguishes a vector channel tuple from a scalar projection of that tuple.
+
+`run_static_descriptor_audit.py` reuses the existing D2 code. It checks:
+
+1. `channel_descriptors` is the implemented three-component vector-static intermediate representation;
+2. `nchannel_descriptor` is exactly the scalar projection \(\boldsymbol\theta^{\mathsf T}\mathbf D\);
+3. the \(N=1\) projection recovers the one-channel toy \(D_w\) analogue;
+4. the recorded predictive and carrier--boundary result summaries remain readable and marked `pass`.
+
+```powershell
 # Fast layer and stored-result audit
 python .\src\structural\script\run_static_descriptor_audit.py `
   --project-root . `
@@ -122,15 +119,39 @@ python .\src\structural\script\run_static_descriptor_audit.py `
   --output-root .\results\structural `
   --rerun structure
 
-# Re-run existing predictive scripts without writing a new formula
+# Re-run the existing predictive scripts; no new formula implementation is created
 python .\src\structural\script\run_static_descriptor_audit.py `
   --project-root . `
   --output-root .\results\structural `
   --rerun predictive
 
-# Re-run every existing benchmark, including the 10-split ablation
+# Re-run every existing benchmark, including the 10-split carrier--boundary ablation
 python .\src\structural\script\run_static_descriptor_audit.py `
   --project-root . `
   --output-root .\results\structural `
   --rerun full
+```
+
+See `STATIC_DESCRIPTOR_LAYER_MAP.md` for the formal internal classification rule.
+
+## E. Selected vector-static toy benchmark
+
+`run_d2_vector_static_multitarget_toy.py` selects the extended D2 carrier--boundary regime as the first vector-static benchmark. It preserves
+
+```text
+(D_act, D_cap, D_exp, D_bnd, D_conn)
+```
+
+and compares it with one shared scalar projection and with task-specific scalar projections across survival, connectivity, and interface-reach targets. See `VECTOR_STATIC_TOY_MODEL_SPEC.md` and `RESULTS_VECTOR_STATIC_TOY_20260625.md`.
+
+```powershell
+# Install the existing NumPy dependency first
+py -m pip install -r .\requirements-ablation.txt
+
+# Ten selected-domain hold-out seeds
+python .\src\structural\script\run_d2_vector_static_multitarget_toy.py `
+  --output-root .\results\structural `
+  --first-seed 20260625 `
+  --repeat-count 10 `
+  --theta-grid-step 0.1
 ```
