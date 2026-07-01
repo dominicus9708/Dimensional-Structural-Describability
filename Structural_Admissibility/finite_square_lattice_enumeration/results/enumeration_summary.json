@@ -1,0 +1,21 @@
+{
+  "admissible_configuration_total": 21799,
+  "distribution": {
+    "0": 63,
+    "1": 80,
+    "2": 102,
+    "3": 84,
+    "4": 65,
+    "5": 44,
+    "6": 38,
+    "7": 12,
+    "8": 15,
+    "9": 4,
+    "10": 4,
+    "11": 0,
+    "12": 1
+  },
+  "lattice_relations": 12,
+  "lattice_vertices": 9,
+  "selected_domains_examined": 512
+}
