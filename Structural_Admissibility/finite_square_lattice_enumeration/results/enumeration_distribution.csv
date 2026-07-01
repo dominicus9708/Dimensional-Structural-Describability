@@ -1,0 +1,14 @@
+induced_relation_count_m,selected_domain_count_N_m,admissible_relation_records_2_pow_m
+0,63,1
+1,80,2
+2,102,4
+3,84,8
+4,65,16
+5,44,32
+6,38,64
+7,12,128
+8,15,256
+9,4,512
+10,4,1024
+11,0,2048
+12,1,4096
