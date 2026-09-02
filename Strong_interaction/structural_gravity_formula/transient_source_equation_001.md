@@ -207,3 +207,49 @@ The first empirical class is electron-ion dielectronic recombination because one
 - state-specific atomic-structure information from which a spatial scale can be sourced or modeled.
 
 The spatial scale must be sourced independently; resonance width alone does not define \(R_{\rm eff}\).
+
+## H. Structural length is not automatically a source radius
+
+Some molecular datasets provide a directly measured or spectroscopically inferred one-dimensional structural length \(L_{\rm struct}\), such as an internuclear separation, without providing a three-dimensional energy-density radius.
+
+Keep
+
+\[
+\boxed{L_{\rm struct}\neq R_{\rm eff}}
+\]
+
+unless an explicit mapping is independently justified.
+
+For such cases the directly supported transient-state record should be written first as
+
+\[
+\boxed{
+\mathcal S_{\rm tr}^{(L)}
+=
+(\Delta E_{\rm tr},\Gamma,\tau,L_{\rm struct})
+}
+\]
+
+rather than forcing a volume descriptor.
+
+A provisional mapping
+
+\[
+R_{\rm eff}=f(L_{\rm struct})
+\]
+
+must be tagged as a project model assumption. For example, setting \(R_{\rm eff}=L_{\rm struct}\) and using a spherical volume is allowed only as a diagnostic proxy, not as a measured source density.
+
+Length-ratio comparisons may be retained without a volume model. If two states have independently known structural lengths,
+
+\[
+\Lambda_L=\frac{L_2}{L_1}
+\]
+
+is directly meaningful, while
+
+\[
+\Lambda_V=\Lambda_L^3
+\]
+
+is only a geometric proxy unless three-dimensional similarity is independently supported.
