@@ -131,6 +131,15 @@ The provenance of \(\tau_{\Gamma}\) inherits the provenance of \(\Gamma\). A the
 
 Keep \(\tau\) independent at this stage. Do not assume \(\mathcal C\tau\), \(\mathcal C/\tau\), or another lifetime weighting without data support.
 
+For cross-case comparison only, a dimensionless resonance-persistence ratio may be recorded as
+
+\[
+Q_r=\frac{E_r}{\Gamma}
+=\frac{E_r\tau_\Gamma}{\hbar}.
+\]
+
+This is a diagnostic ratio, not a DSD boundedness law and not a substitute for the independently specified structural geometry.
+
 ## D. Resolution and describability
 
 For description resolution \(\epsilon\), define only as a provisional coarse-graining rule
@@ -253,3 +262,49 @@ is directly meaningful, while
 \]
 
 is only a geometric proxy unless three-dimensional similarity is independently supported.
+
+## I. Multidimensional structural coordinates
+
+Molecular and multi-constituent transient states can change through more than one independent structural coordinate. A single \(L_{\rm struct}\) is then insufficient.
+
+Use a declared structural-coordinate vector
+
+\[
+\boxed{
+\mathbf L_{\rm struct}
+=
+(L_1,L_2,\ldots,L_m)
+}
+\]
+
+whose entries may include bond lengths, relative separations, bond angles, or other independently motivated internal geometry coordinates.
+
+For a symmetric triatomic example,
+
+\[
+\mathbf L_{\rm struct}^{\rm sym}
+=
+(r,\theta).
+\]
+
+The transient state may therefore be recorded as
+
+\[
+\boxed{
+\mathcal S_{\rm tr}^{(\mathbf L)}
+=
+(E_{\Sigma,\rm cm},\Delta E_{\rm tr},\Gamma,\tau,\mathbf L_{\rm struct},R_{\rm eff};\epsilon,\ldots)
+}
+\]
+
+with \(R_{\rm eff}\) omitted when no independent three-dimensional source radius is available.
+
+The structural null tests then generalize to
+
+\[
+\left.
+\frac{\partial X}{\partial L_a}
+\right|_{E_{\Sigma,\rm cm}}
+\]
+
+for each declared coordinate, while ordinary standard-interaction and finite-size effects must be removed before interpreting a nonzero residual as a new geometric response.
