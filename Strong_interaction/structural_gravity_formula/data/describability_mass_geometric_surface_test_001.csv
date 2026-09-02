@@ -1,0 +1,13 @@
+test_group,N,C_epsilon,R_D,R_over_R1,Xhat_M_over_R,ghat_M_over_R2,Khat_M_over_R3,interpretation
+resolution_same_state,1000000,1000000,1,100,10000,100,1,fully resolved same fixed-density physical state
+resolution_same_state,1000000,1000,0.001,100,10000,100,1,intermediate resolution same physical state
+resolution_same_state,1000000,1,0.000001,100,10000,100,1,externally one bounded source same physical state
+fixed_density_growth,1,1,1,1,1,1,1,baseline
+fixed_density_growth,10,1,0.1,2.15443469,4.64158883,2.15443469,1,constant density growth
+fixed_density_growth,1000,1,0.001,10,100,10,1,constant density growth
+fixed_density_growth,1000000,1,0.000001,100,10000,100,1,constant density growth
+fixed_density_growth,1000000000000,1,0.000000000001,10000,100000000,10000,1,constant density growth
+compaction_fixed_N,1000000,1,0.000001,1,1,1,1,fixed N normalized baseline
+compaction_fixed_N,1000000,1,0.000001,0.5,2,4,8,fixed N radius halved
+compaction_fixed_N,1000000,1,0.000001,0.1,10,100,1000,fixed N radius one tenth
+compaction_fixed_N,1000000,1,0.000001,0.01,100,10000,1000000,fixed N radius one hundredth
