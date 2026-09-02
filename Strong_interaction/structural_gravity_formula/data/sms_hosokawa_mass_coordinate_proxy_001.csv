@@ -1,0 +1,7 @@
+case_id,model_context,total_mass_Msun,surface_radius_AU,enclosed_mass_fraction,radius_Rsun,radius_status,source_note
+SMS10K_H13_PROXY_001,Hosokawa_et_al_2013_case_a1_e0p1_like,10000,100,0.0,0,origin,Center
+SMS10K_H13_PROXY_001,Hosokawa_et_al_2013_case_a1_e0p1_like,10000,100,0.2,20,approximate_visual_digitization,Approximate read-off from Hosokawa et al. 2013 Fig. 2 at M*=1e4 Msun; not an original numerical table
+SMS10K_H13_PROXY_001,Hosokawa_et_al_2013_case_a1_e0p1_like,10000,100,0.4,50,approximate_visual_digitization,Approximate read-off from Hosokawa et al. 2013 Fig. 2 at M*=1e4 Msun; not an original numerical table
+SMS10K_H13_PROXY_001,Hosokawa_et_al_2013_case_a1_e0p1_like,10000,100,0.6,130,approximate_visual_digitization,Approximate read-off from Hosokawa et al. 2013 Fig. 2 at M*=1e4 Msun; not an original numerical table
+SMS10K_H13_PROXY_001,Hosokawa_et_al_2013_case_a1_e0p1_like,10000,100,0.8,400,approximate_visual_digitization,Approximate read-off from Hosokawa et al. 2013 Fig. 2 at M*=1e4 Msun; not an original numerical table
+SMS10K_H13_PROXY_001,Hosokawa_et_al_2013_case_a1_e0p1_like,10000,100,1.0,21503.215567054765,literature_scale_fixed_to_100_AU,Paper reports radius of order 100 AU near/above 1e4 Msun; 100 AU retained for continuity with project thought experiment
