@@ -1,0 +1,4 @@
+case_id,system,resonance_energy_eV,width_eV,width_provenance,lifetime_s,lifetime_provenance,Q_r,structural_coordinate_support,geometry_provenance,current_role
+DRXE001,Xe53+ KLL DR,21500,8,theory_natural_width_from_experimental_study,8.22765e-17,project_derived_from_theory_width,2687.5,model orbital scale only,model,high-energy transient benchmark
+N2SR001,N2- 2Pi_g shape resonance,2.32,0.41,experimental_reference,1.60540e-15,project_derived_from_experimental_width,5.65854,bond-length change available,experimental/reference plus resonance-state literature,molecular one-coordinate benchmark
+CO2SR001,CO2- 2Pi_u shape resonance,3.8,0.33,literature_typical_theory_compilation,1.99458e-15,project_derived_from_literature_width,11.5152,bond-length and bend coordinates available,theory geometry anchored to experimentally established resonance,multidimensional structural benchmark
