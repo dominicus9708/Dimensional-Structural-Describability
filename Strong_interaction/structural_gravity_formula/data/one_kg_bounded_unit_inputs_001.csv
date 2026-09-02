@@ -1,0 +1,9 @@
+case_id,base_isotope,relative_atomic_mass_u,group_size_k,total_mass_kg,radius_m,C_epsilon,case_type
+H1_atom,H-1,1.00782503223,1,1.0,0.1,1,species_fixed_M_R
+He4_atom,He-4,4.00260325413,1,1.0,0.1,1,species_fixed_M_R
+C12_atom,C-12,12.0,1,1.0,0.1,1,species_fixed_M_R
+N14_atom,N-14,14.00307400443,1,1.0,0.1,1,species_fixed_M_R
+Xe136_atom,Xe-136,135.907214484,1,1.0,0.1,1,species_fixed_M_R
+N14_group2,N-14,14.00307400443,2,1.0,0.1,1,bounded_level_regrouping
+N14_group1000,N-14,14.00307400443,1000,1.0,0.1,1,bounded_level_regrouping
+N14_group1e6,N-14,14.00307400443,1000000,1.0,0.1,1,bounded_level_regrouping
