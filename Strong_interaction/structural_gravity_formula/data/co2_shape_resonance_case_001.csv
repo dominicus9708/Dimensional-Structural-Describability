@@ -1,0 +1,13 @@
+case_id,system,resonance,state,quantity,value,unit,provenance_class,source_note
+CO2SR001,e- + CO2,shape resonance,2Pi_u,resonance_energy,3.8,eV,measured_or_experimentally_established,Prominent electron-CO2 shape resonance near 3.8 eV
+CO2SR001,e- + CO2,shape resonance,2Pi_u,natural_width,0.33,eV,literature_typical_theory_compilation,Typical width used in resonance literature; not treated here as a direct experimental natural-width determination
+CO2SR001,e- + CO2,shape resonance,2Pi_u,lifetime_from_width,1.9946e-15,s,project_derived,tau=hbar/Gamma using Gamma=0.33 eV
+CO2SR001,neutral CO2,ground geometry,1Sigma_g+,CO_bond_length_equilibrium,2.1944,bohr,experimental_or_reference_geometry,Neutral equilibrium geometry used in electron-CO2 resonance studies
+CO2SR001,neutral CO2,ground geometry,1Sigma_g+,CO_bond_length_equilibrium,1.16123,angstrom,project_derived,Converted from 2.1944 bohr
+CO2SR001,CO2- resonance,linear stretch path,2Pi_u,CO_bond_length_crossing,2.6,bohr,theory_geometry,Approximate linear symmetric-stretch crossing region from resonance calculations
+CO2SR001,CO2- resonance,linear stretch path,2Pi_u,CO_bond_length_crossing,1.37586,angstrom,project_derived,Converted from 2.6 bohr
+CO2SR001,CO2- resonance,bent conical-intersection region,2Pi_u/related anion surfaces,CO_bond_length,2.4,bohr,theory_geometry,Representative calculated conical-intersection geometry
+CO2SR001,CO2- resonance,bent conical-intersection region,2Pi_u/related anion surfaces,OCO_angle,130,degree,theory_geometry,Representative calculated bent geometry
+CO2SR001,CO2- resonance,linear stretch path,2Pi_u,relative_CO_stretch,0.18483,dimensionless,project_derived,(2.6/2.1944)-1
+CO2SR001,CO2- resonance,bent conical-intersection region,2Pi_u/related anion surfaces,relative_CO_stretch,0.09369,dimensionless,project_derived,(2.4/2.1944)-1
+CO2SR001,e- + CO2,shape resonance,2Pi_u,resonance_persistence_ratio,11.515,dimensionless,project_derived,E_r/Gamma
