@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Develop the minimal equation set needed to test temporary bounded concentration before importing empirical collision data.
+Develop the minimal equation set needed to test temporary bounded concentration before importing a gravity-specific constitutive law.
 
 ## A. Two-body invariant source state
 
@@ -12,76 +12,124 @@ For two incoming constituents with four-momenta \(p_1^\mu\) and \(p_2^\mu\),
 P^\mu=p_1^\mu+p_2^\mu.
 \]
 
-The temporary composite invariant mass is
+Define the total center-of-mass invariant energy by
 
 \[
-M_*^2c^2=P^\mu P_\mu,
-\]
-
-or equivalently
-
-\[
-M_*^2c^4
+E_{\Sigma,\mathrm{cm}}^2
 =
-E_{\rm tot}^2-c^2|\mathbf P_{\rm tot}|^2.
+E_{\rm tot}^2-c^2|\mathbf P_{\rm tot}|^2,
 \]
 
-In the center-of-mass frame,
+so that
 
 \[
-M_*c^2=E_{\rm cm}.
+M_*c^2=E_{\Sigma,\mathrm{cm}}.
 \]
 
-No binding-energy subtraction is required for this temporary-state comparison.
+Do not identify \(E_{\Sigma,\mathrm{cm}}\) with the relative collision energy conventionally denoted \(E_{\rm cm}\) in electron-ion collision papers. In this project use
 
-## B. Effective concentration
+\[
+E_{\rm coll}
+\]
+
+for the measured relative collision energy whenever possible.
+
+For a chosen separated-state threshold \(E_{\rm sep}\), define the transient excess energy
+
+\[
+\Delta E_{\rm tr}
+=
+E_{\Sigma,\mathrm{cm}}-E_{\rm sep}.
+\]
+
+For a resonance quoted at energy \(E_r\) above that threshold,
+
+\[
+\Delta E_{\rm tr}=E_r
+\]
+
+within that threshold convention.
+
+This excess energy is a redistribution of the initial system energy, not newly created energy.
+
+## B. Total coarse-grained concentration and transient excess concentration
 
 For a declared effective radius \(R_{\rm eff}\),
 
 \[
-V_{\rm eff}=\frac{4\pi}{3}R_{\rm eff}^3,
+V_{\rm eff}=\frac{4\pi}{3}R_{\rm eff}^3.
+\]
+
+Two different concentration descriptors must be kept separate.
+
+### B1. Total coarse-grained source concentration
+
+\[
+\mathcal C_{\Sigma}
+=
+\frac{E_{\Sigma,\rm cm}}{V_{\rm eff}},
 \]
 
 \[
-\mathcal C_{\rm src}
+\rho_{\Sigma}
 =
-\frac{E_{\rm cm}}{V_{\rm eff}},
+\frac{\mathcal C_{\Sigma}}{c^2}.
 \]
 
+This includes the constituent rest-energy baseline and is useful only when that coarse-graining choice is physically appropriate.
+
+### B2. Transient excess-energy concentration
+
+To isolate the temporary interaction/bounded-state change from a large static rest-mass baseline, define
+
 \[
-\rho_{\rm src}
+\boxed{
+\mathcal C_{\rm tr}
 =
-\frac{\mathcal C_{\rm src}}{c^2}.
+\frac{\Delta E_{\rm tr}}{V_{\rm eff}}
+}
 \]
 
-For two configurations at fixed constituent identity,
+and
 
 \[
-\frac{\mathcal C_2}{\mathcal C_1}
+\boxed{
+\rho_{\rm tr}
 =
-\frac{E_2}{E_1}
+\frac{\mathcal C_{\rm tr}}{c^2}.
+}
+\]
+
+For two transient configurations,
+
+\[
+\frac{\mathcal C_{{\rm tr},2}}{\mathcal C_{{\rm tr},1}}
+=
+\frac{\Delta E_{{\rm tr},2}}{\Delta E_{{\rm tr},1}}
 \left(\frac{R_1}{R_2}\right)^3.
 \]
 
-At approximately fixed \(E_{\rm cm}\),
+At approximately fixed transient excess energy,
 
 \[
-\frac{\mathcal C_2}{\mathcal C_1}
+\frac{\mathcal C_{{\rm tr},2}}{\mathcal C_{{\rm tr},1}}
 \simeq
 \left(\frac{R_1}{R_2}\right)^3.
 \]
 
-This is the direct concentration lever to be tested before introducing a gravity-specific response law.
+Neither \(\mathcal C_{\Sigma}\) nor \(\mathcal C_{\rm tr}\) is yet a gravitational source law. They are source descriptors.
 
 ## C. Temporary-state lifetime
 
-If a resonance width \(\Gamma\) is experimentally available,
+If a natural resonance width \(\Gamma\) is available,
 
 \[
-\tau\simeq\frac{\hbar}{\Gamma}.
+\tau_{\Gamma}\simeq\frac{\hbar}{\Gamma}.
 \]
 
-Keep \(\tau\) independent at this stage. Do not assume \(\mathcal C_{\rm src}\tau\), \(\mathcal C_{\rm src}/\tau\), or another lifetime weighting without data support.
+The provenance of \(\tau_{\Gamma}\) inherits the provenance of \(\Gamma\). A theoretical natural width gives a model-derived lifetime; an experimentally broadened FWHM must not automatically be used as \(\Gamma\).
+
+Keep \(\tau\) independent at this stage. Do not assume \(\mathcal C\tau\), \(\mathcal C/\tau\), or another lifetime weighting without data support.
 
 ## D. Resolution and describability
 
@@ -93,12 +141,12 @@ R_{\rm eff}^{(\epsilon)}
 \max(R_{\rm physical},\epsilon).
 \]
 
-Then
+Then, for example,
 
 \[
-\mathcal C^{(\epsilon)}
+\mathcal C_{\rm tr}^{(\epsilon)}
 =
-\frac{E_{\rm cm}}
+\frac{\Delta E_{\rm tr}}
 {\frac{4\pi}{3}[R_{\rm eff}^{(\epsilon)}]^3}.
 \]
 
@@ -110,7 +158,7 @@ This permits
 \mathcal C_{\rm ext}
 \]
 
-without implying a change in total energy.
+without implying a change in total invariant energy.
 
 ## E. Geometric-distortion null test
 
@@ -119,32 +167,43 @@ Do not yet posit a constitutive equation for \(X\).
 Use
 
 \[
-X=X(E_{\rm cm},R_{\rm eff},\tau;\epsilon,\ldots)
+X=X(E_{\Sigma,\rm cm},\Delta E_{\rm tr},R_{\rm eff},\tau;\epsilon,\ldots)
 \]
 
 as an unknown response map.
 
-The principal null test is
+The principal compactness null test is
 
 \[
 \left.
 \frac{\partial X_{\rm far}}
 {\partial R_{\rm eff}}
-\right|_{E_{\rm cm}}
+\right|_{E_{\Sigma,\rm cm}}
 =0.
 \]
 
-A nonzero result would mean that source compactness/bounded concentration contributes information not removed by fixing total center-of-mass energy, subject to ordinary finite-size and standard-interaction explanations being removed first.
+A nonzero residual would mean that source compactness/bounded concentration contributes information not removed by fixing total invariant center-of-mass energy, after ordinary finite-size and standard-interaction explanations are removed.
 
-## F. First data target
+## F. Data provenance classes
 
-The first preferred empirical class is an electron-ion dielectronic-recombination resonance because one dataset can provide or constrain:
+Every empirical case must separate:
 
-- collision/resonance energy \(E_r\),
-- center-of-mass energy,
-- resonance width \(\Gamma\),
-- lifetime \(\tau\),
+1. measured quantities,
+2. theory values supplied by the experimental paper,
+3. project-derived quantities,
+4. project model assumptions.
+
+In particular, a model orbital radius must not be recorded as an experimentally measured \(R_{\rm eff}\).
+
+## G. First empirical class
+
+The first empirical class is electron-ion dielectronic recombination because one case can provide or constrain:
+
+- relative collision/resonance energy \(E_r\),
+- resonance line shape,
+- natural width \(\Gamma\) when available,
+- lifetime proxy \(\tau_{\Gamma}\),
 - charge state and constituent identity,
-- state-specific structure calculations from which a defensible spatial scale may later be obtained.
+- state-specific atomic-structure information from which a spatial scale can be sourced or modeled.
 
 The spatial scale must be sourced independently; resonance width alone does not define \(R_{\rm eff}\).
