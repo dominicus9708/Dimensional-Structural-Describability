@@ -1,0 +1,7 @@
+quantity,value,unit,provenance,source
+atomic_mass_14N,14.00307400443,u,NIST_isotopic_mass,https://physics.nist.gov/cgi-bin/Compositions/stand_alone.pl?ele=N
+atomic_mass_constant,1.66053906892e-27,kg,CODATA_2022,NIST_CODATA_2022
+N2_dissociation_energy_D0,9.759,eV,NIST_spectroscopic_compilation,https://srd.nist.gov/JPCRD/jpcrd93.pdf
+N2_equilibrium_bond_length,1.098,angstrom,NIST_CCCBDB_experimental_reference,https://cccbdb.nist.gov/bondlengthmodel2x.asp?basis=20&method=16
+initial_total_mass,1.0,kg,project_test_definition,
+reference_external_radius,0.1,m,project_test_definition,
