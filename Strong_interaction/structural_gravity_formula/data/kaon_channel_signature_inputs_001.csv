@@ -1,0 +1,5 @@
+candidate,channel,A_share,D_component_abs
+pion,channel_1,0.5,0.485
+pion,channel_2,0.5,0.485
+kaon,u,0.39,0.331
+kaon,sbar,0.61,0.436
