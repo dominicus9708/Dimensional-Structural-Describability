@@ -1,0 +1,5 @@
+framework,candidate,mass_GeV,input_mode,r_A_fm,r_B_fm,r_perp_fm,abs_D0,source
+NJL_2026,pion,0.138,derive_from_Breit_and_LF,,1.24,0.266,,https://arxiv.org/abs/2608.29848
+NJL_2026,kaon,0.469,derive_from_Breit_and_LF,,0.381,0.252,,https://arxiv.org/abs/2608.29848
+CSM_2024,pion,0.135,direct_A_radius_and_D,0.47,,,0.97,https://link.springer.com/article/10.1140/epjc/s10052-024-12518-x
+CSM_2024,kaon,0.495,direct_A_radius_and_D,0.40,,,0.77,https://link.springer.com/article/10.1140/epjc/s10052-024-12518-x
