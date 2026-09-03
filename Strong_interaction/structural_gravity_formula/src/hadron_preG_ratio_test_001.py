@@ -17,7 +17,6 @@ def z_and_derivative_at_zero(mpi_GeV=MPI_GEV, qmax_GeV=QMAX_GEV):
     a = math.sqrt(tcut)
     b = math.sqrt(tcut - t0)
     z0 = (a - b) / (a + b)
-    # dz/dt from z=(sqrt(tcut-t)-b)/(sqrt(tcut-t)+b)
     dzdt0 = -b / (a * (a + b) ** 2)
     return z0, dzdt0
 
@@ -49,6 +48,13 @@ def a0_and_derivative(row):
     raise ValueError(model)
 
 
+def comparison_family(model):
+    # The published preferred fits differ: pion uses monopole, proton uses dipole.
+    # They are paired as the authors' preferred pole-family fits. z-expansion is
+    # kept as the common model-dependence cross-check.
+    return "preferred_pole" if model in {"monopole", "dipole"} else "zexp"
+
+
 rows = []
 with INPUT.open("r", encoding="utf-8", newline="") as f:
     for row in csv.DictReader(f):
@@ -61,6 +67,7 @@ with INPUT.open("r", encoding="utf-8", newline="") as f:
         rows.append({
             "candidate": row["candidate"],
             "fit_model": row["fit_model"],
+            "comparison_family": comparison_family(row["fit_model"]),
             "mass_GeV": f"{mass_GeV:.10e}",
             "A0": f"{A0:.10e}",
             "dA_dt_GeV-2": f"{dA:.10e}",
@@ -70,12 +77,11 @@ with INPUT.open("r", encoding="utf-8", newline="") as f:
             "D_weighted_ell_over_m_fm_per_GeV": f"{weighted:.10e}",
         })
 
-# Pairwise pion/proton ratios within each fit family.
-by_model = {}
+by_family = {}
 for row in rows:
-    by_model.setdefault(row["fit_model"], {})[row["candidate"]] = row
+    by_family.setdefault(row["comparison_family"], {})[row["candidate"]] = row
 
-for model, group in by_model.items():
+for family, group in by_family.items():
     if "pion" in group and "proton" in group:
         pi = group["pion"]
         p = group["proton"]
