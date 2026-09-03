@@ -1,0 +1,7 @@
+model,composition_class,GM_m3_s2,R_m,c_m_s,provenance_note
+B23_GS98,high_Z,1.3271244e20,6.9599e8,299792458,"B23/SF-III composition family; solar radius from Serenelli B23 summary; nominal solar GM used as common reference"
+B23_AGSS09,low_Z,1.3271244e20,6.9599e8,299792458,"B23/SF-III composition family; same calibrated solar mass/radius boundary"
+B23_C11,intermediate,1.3271244e20,6.9599e8,299792458,"B23/SF-III composition family; same calibrated solar mass/radius boundary"
+B23_AAG21,low_Z,1.3271244e20,6.9599e8,299792458,"B23/SF-III composition family; same calibrated solar mass/radius boundary"
+B23_MB22m,high_Z_meteoritic,1.3271244e20,6.9599e8,299792458,"B23/SF-III composition family; same calibrated solar mass/radius boundary"
+B23_MB22p,high_Z_photospheric,1.3271244e20,6.9599e8,299792458,"B23/SF-III composition family; same calibrated solar mass/radius boundary"
