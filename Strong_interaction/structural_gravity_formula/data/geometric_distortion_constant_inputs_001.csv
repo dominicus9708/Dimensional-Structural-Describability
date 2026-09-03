@@ -1,0 +1,5 @@
+case,M_kg,rho_kg_m3,provenance
+one_kg_reference,1.0,1000.0,project_reference
+Earth_mean,5.97217e24,5513.4,previous_planetary_dataset
+Sun_mean,1.98847e30,1408.0,previous_stellar_reference
+SMS_1e4Msun_average_proxy,1.98847e34,1.42e-6,previous_SMS_proxy
