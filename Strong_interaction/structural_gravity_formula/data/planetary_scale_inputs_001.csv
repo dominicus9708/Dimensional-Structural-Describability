@@ -1,0 +1,10 @@
+body,mass_kg,mean_radius_m,bulk_density_kg_m3,equatorial_gravity_m_s2,escape_velocity_m_s,source
+Mercury,3.30103e23,2.4394e6,5428.9,3.70,4250,https://ssd.jpl.nasa.gov/planets/phys_par.html
+Venus,4.86731e24,6.0518e6,5243,8.87,10360,https://ssd.jpl.nasa.gov/planets/phys_par.html
+Earth,5.97217e24,6.3710084e6,5513.4,9.80,11190,https://ssd.jpl.nasa.gov/planets/phys_par.html
+Mars,6.41691e23,3.38950e6,3934.0,3.71,5030,https://ssd.jpl.nasa.gov/planets/phys_par.html
+Jupiter,1.898125e27,6.9911e7,1326.2,24.79,60200,https://ssd.jpl.nasa.gov/planets/phys_par.html
+Saturn,5.68317e26,5.8232e7,687.1,10.44,36090,https://ssd.jpl.nasa.gov/planets/phys_par.html
+Uranus,8.68099e25,2.5362e7,1270,8.87,21380,https://ssd.jpl.nasa.gov/planets/phys_par.html
+Neptune,1.024092e26,2.4622e7,1638,11.15,23560,https://ssd.jpl.nasa.gov/planets/phys_par.html
+Ceres,9.38416e20,4.697e5,2162,0.27,510,https://ssd.jpl.nasa.gov/planets/phys_par.html
