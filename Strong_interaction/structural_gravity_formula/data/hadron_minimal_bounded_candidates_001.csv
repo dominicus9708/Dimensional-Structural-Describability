@@ -1,0 +1,5 @@
+candidate,fit_model,mass_GeV,A_g_p0,A_g_p1,A_g_p2,A_q_p0,A_q_p1,A_q_p2,D_total,D_total_err,notes
+pion,monopole,0.169,0.546,1.129,,0.481,1.262,,-0.900,0.070,"A_i(t)=alpha/(1-t/Lambda^2); same lattice ensemble family, m_pi~169 MeV"
+proton,dipole,0.9040177816,0.501,1.262,,0.510,1.477,,-3.87,0.97,"A_i(t)=alpha/(1-t/Lambda^2)^2; mass derived from am=0.4169,a=0.091 fm"
+pion,zexp,0.169,0.379,-0.551,-0.37,0.353,-0.430,-0.271,-0.860,0.092,"z expansion kmax=2; tcut=4 m_pi^2"
+proton,zexp,0.9040177816,0.271,-0.648,-0.089,0.314,-0.591,-0.06,-3.35,0.58,"z expansion kmax=2; tcut=4 m_pi^2"
