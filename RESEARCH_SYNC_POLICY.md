@@ -96,3 +96,31 @@ Open a new synchronization epoch only when there is a substantive research claim
 - FAIL, counterexample, NO_GAIN, REJECTED, superseded and recalculation-required states are synchronization targets too.
 - Project-specific mathematical or scientific rules do not automatically transfer across projects.
 - This synchronization policy is the common rule inherited by all research projects; stricter project-specific policies may coexist.
+
+## Tool/API failure isolation and safe retry
+
+Effective addition: **2026-10-05 KST**
+
+This rule applies to all GitHub–Notion synchronized research work.
+
+1. **Verify paths and IDs before writes.** If a GitHub path, Notion page ID, or connector target is uncertain, search/list/fetch it first. Do not batch guessed paths together with writes.
+2. **Use small restartable write units.** Prefer: immutable claim-relevant artifact → repository current/status → Notion current/status → cross-check. Avoid one oversized multi-write request when the steps can be isolated.
+3. **Assume tool calls are non-atomic.** If a compound call fails, earlier writes may already exist. Re-read the affected surfaces before retrying.
+4. **Retry idempotently.** Do not replay a create/update blindly. Check whether the file/page/commit/block already exists and refresh the latest file SHA before updating.
+5. **Classify the failure before choosing a workaround.** Distinguish path/404 errors, stale-SHA/update conflicts, connector timeout/safety blocking, Notion target errors, and actual hosted-runner quota/compute bottlenecks.
+6. **Do not use a compute runner as an API workaround.** Self-hosted or borrowed runners are valid for real computation or hosted-runner constraints, not for GitHub/Notion API errors, wrong paths, stale SHAs, connector blocking, or documentation-sync failures.
+7. **Record a restartable failure checkpoint** when synchronization is interrupted:
+
+```text
+LAST_VERIFIED_ARTIFACT:
+LAST_SUCCESSFUL_WRITE:
+FAILED_SURFACE:
+FAILED_STEP:
+FAILURE_CLASS:
+SYNC_STATUS: SYNC_PENDING | SYNC_COMPLETE
+NEXT_RETRY_STEP:
+```
+
+8. **Report synchronization complete only after re-reading both surfaces.** GitHub and Notion must agree on the latest completed event, current status, active front, and next canonical step.
+9. **Preserve successful partial writes.** Do not roll back correct immutable evidence just because a later status/Notion write failed; finish the pending surface instead.
+10. **Avoid duplicate recovery artifacts.** A retry after timeout or safety blocking must continue from the last verified step rather than recreating already-successful evidence.
